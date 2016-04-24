@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homeworks</title>
+	  <meta charset="utf-8" />
+    <link href="./style/nav.css" type="text/css" rel="stylesheet" />
+    <link href="./style/grid.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <ul id ="menu">
+            <li><a href="Registration Form.html">Form</a></li>
+            <li><a href="University Grid.html">University</a></li>
+            <li><a href="Store.html">Store</a></li>
+            <li><a href="Grid.html">Grid</a></li>
+        </ul>
+        <hr />
+    </nav>
+    <content>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="6" id="connecttoscript">Drag a column header and drop it here to group by that column</th>
+          </tr>
+          <tr>
+            <th>Product ID</th>
+            <th>Product name</th>
+            <th>Unit price</th>
+            <th>Quantity pre unit</th>
+            <th>Units in stock</th>
+            <th>Discontinued</th>
+          </tr>
+          <tr>
+            <th><input type="text" name="id" size="1"/></th>
+            <th><input type="text" name="product" size="10"/></th>
+            <th><input type="text" name="price" size="5"/>
+                <input type="image" src="./buttons/filter.jpg" alt="sumbit" width="20" height="20"  /></th>
+            <th><input type="text" name="quantity" size="10"/></th>
+            <th><input type="text" name="instock" size="5"/>
+                <input type="image" src="./buttons/filter.jpg" alt="sumbit" width="20" height="20"  /></th>
+            <th><input type="checkbox" name="discontinued"size="10"/>
+                <input type="image" src="./buttons/filter.jpg" alt="sumbit" width="20" height="20"  /></th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="6">
+              <form action="#">
+                <input type="image" src="./buttons/button_grey_first.png" alt="submit" width="20" height="20"/>
+                <input type="image" src="./buttons/button_grey_rew.png" alt="submit" width="20" height="20"/>
+                <a href=#>1</a>
+                <a href=#>2</a>
+                <a href=#>3</a>
+                <a href=#>4</a>
+                <a href=#>5</a>
+                <a href=#>6</a>
+                <a href=#>7</a>
+                <a href=#>8</a>
+                <a href=#>9</a>
+                <a href=#>10</a>
+                <a href=#></a>
+                <input type="image" src="./buttons/button_grey_ffw.png" alt="submit" width="20" height="20"/>
+                <input type="image" src="./buttons/button_grey_last.png" alt="submit" width="20" height="20"/>
+                <label for="pager">Page size:</label>
+                <input type="number" name="pages" id="pages" min="10" max="100" step="10" value="10"/>
+              </form>
+              335104 Items in 33511 pages
+            </td>
+          </tr>
+
+        </tfoot>
+        <tbody>
+          <tr>
+            <td class="number">1</td>
+            <td>Chai</td>
+            <td>$18.00</td>
+            <td>10boxes x 20bag</td>
+            <td>39</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">2</td>
+            <td>Chang</td>
+            <td>$19.00</td>
+            <td>24 - 12 oz bottles</td>
+            <td>17</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">3</td>
+            <td>Aniseed syrup</td>
+            <td>$10.00</td>
+            <td>12 - 550 ml bottles</td>
+            <td>13</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">4</td>
+            <td>Chef Anton`s Cajun Seasoning</td>
+            <td>$22.00</td>
+            <td>48 - 6 jars</td>
+            <td>53</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">5</td>
+            <td>Chef Anton`s Gumbo Mix</td>
+            <td>$21.35</td>
+            <td>36 boxes</td>
+            <td>0</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">6</td>
+            <td>Grandma`s Boysenberry Spread</td>
+            <td>$25.00</td>
+            <td>12 - 8 oz jars</td>
+            <td>120</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">7</td>
+            <td>Uncle Bob`s Organic Dried Pears</td>
+            <td>$30.00</td>
+            <td>12 - lb. pkgs.</td>
+            <td>15</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">8</td>
+            <td>Northwoods Cranberry Sauce</td>
+            <td>$40.00</td>
+            <td>12 - 12 oz jars</td>
+            <td>6</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">9</td>
+            <td>Mishi Kobe Niku</td>
+            <td>$97.00</td>
+            <td>18 - 500 g pkgs.</td>
+            <td>29</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+          <tr>
+            <td class="number">10</td>
+            <td>Ikura</td>
+            <td>$31.00</td>
+            <td>12 - 300 ml jars</td>
+            <td>31</td>
+            <td class="number"><input type="checkbox" name="discontinued"/></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </content>
+</body>
+</html>

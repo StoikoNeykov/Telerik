@@ -1,0 +1,34 @@
+table{
+  width: auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 0px;
+  background-color: #F0F0F0;
+}
+#connecttoscript{
+  text-align: center;
+}
+input, a, label{
+  float:left;
+}
+tfoot{
+  text-align: right;
+}
+a{
+  padding: 1px 5px;
+}
+th{
+  text-align: left;
+}
+th, td{
+  padding: 5px;
+}
+tbody{
+  background-color: white;
+}
+tbody tr:hover{
+  background-color: #F5F5F5;
+}
+.number{
+  text-align: center;
+}

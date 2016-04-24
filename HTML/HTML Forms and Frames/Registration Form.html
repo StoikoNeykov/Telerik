@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homeworks</title>
+	  <meta charset="utf-8" />
+    <link href="./style/nav.css" type="text/css" rel="stylesheet" />
+    <link href="./style/reg.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <ul id ="menu">
+            <li><a href="Registration Form.html">Form</a></li>
+            <li><a href="University Grid.html">University</a></li>
+            <li><a href="Store.html">Store</a></li>
+            <li><a href="Grid.html">Grid</a></li>
+        </ul>
+        <hr />
+    </nav>
+    <content>
+      <fieldset>
+        <legend>Registration</legend>
+        <form class="reg" action="#" method="post">
+          <table border="1">
+          <tfoot>
+            <td colspan="4">
+              <input type="submit" name="submit" alt="submit" value="comfirm"/>
+              <input type="reset" name="reset" alt="reset" value="clear"/>
+            </td>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td id="first"><label for="first name">First name*</label></td>
+              <td colspan="3"><input type="text" id="first name" name="frst name" placeholder="First name"
+                required="true" autofocus="true"/></td>
+            </tr>
+            <tr>
+              <td id="first"><label for="last name">Last name*</label></td>
+              <td colspan="3"><input type="text" id="last name" name="last name" placeholder="Last name"
+                required="true"/></td>
+            </tr>
+            <tr rowspan="4">
+              <td id="first"><label for="address">Address</label></td>
+              <td colspan="3">
+                <textarea id="address" name="adress" rows="4" cols="50"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td id="first"><label for="city">City</label></td>
+              <td ><input type="text" id="city" name="city"/></td>
+              <td id="first"><label for="state">State</label></td>
+              <td ><input type="text" id="state" name="state" /></td>
+            </tr>
+            <tr>
+              <td id="first"><label for="zipcode">Zip/Postal Code</label></td>
+              <td colspan="3"><input type="text" id="zipcode" name="zipcode"></imput></td>
+            </tr>
+            <tr>
+              <td id="first"><label for="country">Country*</label></td>
+              <td colspan="3"><select id="country" name="country" required="true">
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="US">US</option>
+                <option value="Germany">Germany</option>
+                <option value="Other">Other</option>
+              </select></td>
+            </tr>
+            <tr rowspan="2">
+              <td id="first">
+                <label for="phone" >Phone (country code,</label><br/>
+                <label for="phone">area code,phone number)*</label>
+              </td>
+              <td colspan="3">(+<<input type="text" name="countrycode" placeholder="359" required="true" size="3"/>)
+              <input type="text" name="areacode" placeholder ="88" required="true" size="2"/>-
+              <input type="text" name="phone" id="phone" required="true" />
+            </tr>
+            <tr>
+              <td id="first"><label for="mail">E-mail*</label></td>
+              <td colspan="3"><input type="mail" id="mail" name="mail" required="true"/></td>
+            </tr>
+            <tr>
+              <td id="first"><label for="bday">Birth date</label></td>
+              <td colspan="3">Month<input type="text" id="bday" name="month" maxlength="2" size="1"/>Date
+                <input type="text" name="date" maxlength="2" size="1"/>Year(4 digits)
+                <input type="text"name="year" maxlength="4" size ="4"/></td>
+            </tr>
+            <tr>
+              <td id="first"><label for="gender">Gender*</label></td>
+              <td colspan="3"><select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </td>
+            </tr>
+            <tr rowspan=6>
+              <td id="first">Starting date*</td>
+              <td colspan="3"><label for"spring">Spring 2016</label>
+                <input type="radio" name="start" value="spring" checked/>
+                <label for"summer">Summer 2016</label>
+                <input type="radio" name="start" value="summer" /></td>
+            </tr>
+            <tr>
+              <td id="first"><label for="comment">Comments/Questions</label></td>
+              <td colspan="3"><textarea id="comment" rows="6" cols="50"
+                placeholder="Place for specific information or/and questions."></textarea></td>
+            </tr>
+
+          </tbody>
+          </table>
+        </form>
+      </fieldset>
+    </content>
+</body>
+</html>

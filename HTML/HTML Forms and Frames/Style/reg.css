@@ -1,0 +1,31 @@
+fieldset{
+  border-radius: 5px;
+}
+
+legend{
+  font-style: italic;
+  font-size: 28px;
+  text-align: center;
+}
+#first{
+  text-align: right;
+  vertical-align: top;
+}
+fieldset{
+  display: inline;
+}
+table{
+  border-spacing: 0px;
+  border-collapse: collapse;
+  border-color: #C8C8C8;
+}
+td{
+  padding: 5px;
+}
+#center{
+  text-align: center;
+}
+tfoot{
+  background-color: #66CCFF;
+  text-align: center;
+}

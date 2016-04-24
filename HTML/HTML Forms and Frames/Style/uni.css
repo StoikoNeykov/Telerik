@@ -1,0 +1,24 @@
+table{
+  border-collapse: separate;
+  border-radius: 5px;
+  border-color: #D0D0D0;
+}
+th{
+  padding: 5px;
+}
+#pager{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 5px;
+  text-align: center;
+}
+#pager li{
+  display: inline-block;
+}
+#pager li a{
+  display: block;
+}
+td{
+  padding: 5px;
+}

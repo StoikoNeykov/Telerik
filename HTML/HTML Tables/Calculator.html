@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Homeworks</title>
+    <style>
+        table.calc{
+            text-align:center;
+            border:solid;
+        }
+        .score{
+            text-align:right;
+        }
+        .button{
+            width:100%;
+            background-color:lightgray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Tables</h1>
+        <hr />
+    </header>
+    <nav>
+        <table cellspacing="5">
+            <tr>
+                <td><a href="Tea.html">Tea</a></td>
+                <td><a href="HTML Table.html">HTLM Table</a></td>
+                <td><a href="HTML Form.html">HTML Form</a></td>
+            </tr>
+        </table>
+        <hr />
+    </nav>
+    <content>
+        <table id="calc" cellspacing="0">
+            <tr>
+                <td colspan="4"><input type="text" class="score" name="score" value="123" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" name="1" value="1"</td>
+                <td><input type="button" class="button" name="2" value="2"</td>
+                <td><input type="button" class="button" name="3" value="3"</td>
+                <td><input type="button" class="button" name="+" value="+"</td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" name="4" value="4"</td>
+                <td><input type="button" class="button" name="5" value="5"</td>
+                <td><input type="button" class="button" name="6" value="6"</td>
+                <td><input type="button" class="button" name="-" value="-"</td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" name="7" value="1"</td>
+                <td><input type="button" class="button" name="8" value="2"</td>
+                <td><input type="button" class="button" name="9" value="3"</td>
+                <td><input type="button" class="button" name="*" value="*"</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" class="button" name="0" value="0"</td>
+                <td><input type="button" class="button" name="." value="."</td>
+                <td><input type="button" class="button" name="/" value="/"</td>
+            </tr>
+        </table>
+    </content>
+    <footer></footer>
+</body>
+</html>

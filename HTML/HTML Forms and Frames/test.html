@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        th:first-child {
+            text-align: right;
+            width: 10em;
+        }
+
+        td:first-child {
+            text-align: center;
+            background-color: lightblue;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get">
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <th>Last Name</th>
+                    <td colspan="3"> <input type="text" placeholder="Nakov"></td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td colspan="3"> <input type="text" placeholder="Svetlin"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td colspan="3"> <textarea name="Address" id="Address" cols="20" rows="4" placeholder="17 Hristo Botev Str. floor 3, apt. 12"></textarea></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td> <input type="text" placeholder="Kaspichan"></td>
+                    <th>State</th>
+                    <td><input type="text" size="2"></td>
+                </tr>
+                <tr>
+                    <th>Zip/Postal Code</th>
+                    <td colspan="3"> <input type="text" placeholder="9325"></td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td colspan="3">
+                        <select name="Country" id="Country">
+                        <option value="Albania">Albania</option>
+                        <option value="Bulgaria" selected="selected">Bulgaria</option>
+                        <option value="Some other1">Some other country</option>
+                        <option value="Some other2">Yet another country</option>
+                        <option value="Some other3">OK this is the last one</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Phone (country code, area code, number)</th>
+                    <td colspan="3">(+<input type="tel" size="6"> ) <input type="tel" size="6"> - <input type="tel"></td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td colspan="3"> <input type="email" placeholder="nakov@kaspichan.org"></td>
+                </tr>
+                <tr>
+                    <th>Birth date</th>
+                    <td colspan="3">Month <input type="text" size="2"> Day <input type="text" size="2" >Year
+                        (4 digit)
+                        <input type="text" size="4" minlength="4" maxlength="4"></td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td colspan="3">
+                        <select name="Gender" id="Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Undecided">Undecided</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Starting date</th>
+                    <td colspan="3"><input type="radio" name="semester" id="spring_2006" value="Spring_2006"><label for="spring_2006">Spring 2006</label>
+                        <input
+                            type="radio" name="semester" id="summer_2006" value="Summer_20"><label for="spring_2006">Summer 2006</label></td>
+                </tr>
+                <tr>
+                    <th>Comments/Questions</th>
+                    <td colspan="3"> <textarea name="comments" id="comments" cols="20" rows="6" placeholder="Please send me more information about the lodging"></textarea></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"><input type="submit" value="Submit" formaction="#"> <input type="reset" value="Clear This Form"> </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+
+</html>
