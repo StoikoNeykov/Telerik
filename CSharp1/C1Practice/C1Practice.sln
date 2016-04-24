@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchInBits", "SearchInBit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextToNumber", "TextToNumber\TextToNumber.csproj", "{6B77A69D-6A53-4733-87A1-EAB4707A6FF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeaceOfCake", "PeaceOfCake\PeaceOfCake.csproj", "{A40F8421-F697-43FF-818A-145FE602664E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryFemaleGPS", "AngryFemaleGPS\AngryFemaleGPS.csproj", "{F195E9F6-AF5E-4D3F-8C98-4BC3E4237294}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{6B77A69D-6A53-4733-87A1-EAB4707A6FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B77A69D-6A53-4733-87A1-EAB4707A6FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B77A69D-6A53-4733-87A1-EAB4707A6FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A40F8421-F697-43FF-818A-145FE602664E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40F8421-F697-43FF-818A-145FE602664E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40F8421-F697-43FF-818A-145FE602664E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40F8421-F697-43FF-818A-145FE602664E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F195E9F6-AF5E-4D3F-8C98-4BC3E4237294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F195E9F6-AF5E-4D3F-8C98-4BC3E4237294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F195E9F6-AF5E-4D3F-8C98-4BC3E4237294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F195E9F6-AF5E-4D3F-8C98-4BC3E4237294}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
