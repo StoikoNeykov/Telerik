@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryFemaleGPS", "AngryFema
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnesAndZeros", "OnesAndZeros\OnesAndZeros.csproj", "{B5336409-4E0B-4066-81BF-6B763809BF66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{616BA8C9-E154-42E7-99AE-616356DFE23F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{B5336409-4E0B-4066-81BF-6B763809BF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5336409-4E0B-4066-81BF-6B763809BF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5336409-4E0B-4066-81BF-6B763809BF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616BA8C9-E154-42E7-99AE-616356DFE23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616BA8C9-E154-42E7-99AE-616356DFE23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616BA8C9-E154-42E7-99AE-616356DFE23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616BA8C9-E154-42E7-99AE-616356DFE23F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
