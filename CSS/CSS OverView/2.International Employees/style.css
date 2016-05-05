@@ -1,0 +1,31 @@
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 0;
+}
+th {
+  background-color: #54B706;
+  border-bottom: 1px solid gray;
+  color: white;
+  font-weight: lighter;
+  text-align: left;
+}
+
+th, td {
+  border-right: 1px solid gray;
+  padding: 4px 30px 4px 5px;
+}
+tr th:last-of-type,  tr td:last-of-type {
+  border-right: 0;
+  padding: 4px 4px 4px 5px;
+}
+tr:nth-of-type(2n+1){
+  background-color: #ECECD8;
+}
+tr:last-of-type td {
+  border-bottom: 1px solid gray;
+}

@@ -1,0 +1,50 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  background-color: #595959
+}
+h3 {
+  margin: 7px;
+  font-size: 20px;
+  font-weight: 100;
+}
+p {
+  margin: 0;
+  padding-left: 41%;
+}
+dt, dd {
+  padding: 5px;
+}
+dl.inline {
+  width: 300px;
+  line-height: 20px;
+}
+dl.inline dd {
+  display: inline;
+  width: 65%;
+  margin: 0;
+}
+dl.inline dt {
+  color:white;
+  font-style: italic;
+  width: 35%;
+  display: inline-block;
+}
+.fa-circle.fa {
+  color: #71B47A;
+  font-size: 0.8em;
+}
+.yellow {
+  color: #F4ECB1;
+}
+.red {
+  color: red;
+}
+.gray {
+  color: #CCC;
+}
+.orange {
+  color: #B96B20;
+}

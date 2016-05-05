@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  background-color: #595959
+}
+table {
+  border-spacing: 6px;
+}
+td {
+  padding: 3px 20px 3px 3px;
+}
+th {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+.fa-circle.fa {
+  color: #71B47A;
+  font-size: 0.8em;
+}
+.white {
+  color: white;
+  font-style: italic;
+  vertical-align: top;
+}
+.gray {
+  color: #CCC;
+}
+.yellow {
+  color: #F4ECB1;
+}
+.red {
+  color: red;
+}
+.orange {
+  color: #B96B20;
+}
