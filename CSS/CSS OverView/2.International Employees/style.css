@@ -29,3 +29,7 @@ tr:nth-of-type(2n+1){
 tr:last-of-type td {
   border-bottom: 1px solid gray;
 }
+input {
+  box-shadow: -1px -1px 1px #333;
+  border-radius: 10px;
+}
