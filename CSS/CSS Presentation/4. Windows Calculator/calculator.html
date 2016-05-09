@@ -4,29 +4,250 @@
   <meta charset="utf-8" />
   <title>Calculator</title>
   <meta name="keywords" content="calculator" />
-  <link rel="stylesheet" href="calc.css" />
+  <link rel="stylesheet" href="calc.css"/>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
     <div id="conteiner">
       <header>
         <!-- icons and Calculator text -->
+       <p><i class="fa fa-calculator"></i>Calculator</p>
+       <div id="icons">
+         <i class="fa fa-minus gradient"></i>
+         <i class="fa fa-square-o gradient"></i>
+         <i class="fa fa-remove red-gradient"></i>
+       </div>
       </header>
-      <main>
-        <nav>
+      <div id="main">
+        <div id="nav">
           <!-- The menu-->
-        </nav>
-        <section>
+          <a href="#">View</a>
+          <a href="#">Edit</a>
+          <a href="#">Help</a>
+        </div>
+        <div id=func>
           <div id=score>
             <!-- Score -->
+            8854455
           </div>
           <div id="bits">
             <!--bits-->
+             <table>
+               <tr>
+                 <td>0000</td>
+                 <td>0000</td>
+                 <td>0000</td>
+                 <td>0000</td>
+                 <td>0000</td>
+                 <td>0000</td>
+                 <td>0000</td>
+                 <td>0000</td>
+               </tr>
+               <tr>
+                 <td>63</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td>47</td>
+                 <td></td>
+                 <td></td>
+                 <td>32</td>
+               </tr>
+               <tr>
+                 <td>0000</td>
+                 <td>0000</td>
+                 <td>1000</td>
+                 <td>0111</td>
+                 <td>0001</td>
+                 <td>1011</td>
+                 <td>1011</td>
+                 <td>0111</td>
+               </tr>
+               <tr>
+                 <td>31</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td>15</td>
+                 <td></td>
+                 <td></td>
+                 <td>0</td>
+               </tr>
+             </table>
           </div>
-          <div "control">
+          <div id="control">
             <!-- keys and radio bottons-->
+            <table id="buttons">
+              <tr>
+                <td rowspan="3" colspan="2" class="radio">
+                  <div>
+                    <input type="radio" id="hex" name="base"><label for="hex">Hex</label><br>
+                    <input type="radio" id="dec" name="base" checked><label for="dec">Dec</label><br>
+                    <input type="radio" id="oct" name="base"><label for="oct">Oct</label><br>
+                    <input type="radio" id="bin" name="base"><label for="bin">Bin</label>
+                  </div>
+                </td>
+                <td class="gray">
+                  <div>&nbsp</div>
+                </td>
+                <td  class="darker">
+                  <div>Mod</div>
+                </td>
+                <td class="gray">
+                  <div>A</div>
+                </td>
+                <td class="gray">
+                  <div>MC</div>
+                </td>
+                <td class="gray">
+                  <div>MR</div>
+                </td>
+                <td class="gray">
+                  <div>MS</div>
+                </td>
+                <td class="gray">
+                  <div>M+</div>
+                </td>
+                <td class="gray">
+                  <div>M-</div>
+                </td>
+              </tr>
+              <tr>
+                <td  class="darker">
+                  <div>(</div>
+                </td>
+                <td  class="darker">
+                  <div>)</div>
+                </td>
+                <td class="gray">
+                  <div>B</div>
+                </td>
+                <td  class="darker">
+                  <div><i class="fa fa-long-arrow-left" aria-hidden="true"></i></div>
+                </td>
+                <td class="yellow">
+                  <div>CE</div>
+                </td>
+                <td  class="darker">
+                  <div>C</div>
+                </td>
+                <td  class="darker">
+                  <div>&plusmn</div>
+                </td>
+                <td class="gray">
+                  <div>√</div>
+                </td>
+              </tr>
+              <tr>
+                <td  class="darker">
+                  <div>RoL</div>
+                </td>
+                <td  class="darker">
+                  <div>RoR</div>
+                </td>
+                <td class="gray">
+                  <div>C</div>
+                </td>
+                <td class="lighter">
+                  <div>7</div>
+                </td>
+                <td class="lighter">
+                  <div>8</div>
+                </td>
+                <td class="lighter">
+                  <div>9</div>
+                </td>
+                <td  class="darker">
+                  <div>/</div>
+                </td>
+                <td class="gray">
+                  <div>%</div>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="3" colspan="2" class="radio">
+                  <div>
+                    <input type="radio" id="qword" name="word"><label for="qword">Qword</label><br>
+                    <input type="radio" id="dword" name="word" checked><label for="dword">Dword</label><br>
+                    <input type="radio" id="word" name="word"><label for="word">Word</label><br>
+                    <input type="radio" id="byte" name="word"><label for="byte">Byte</label>
+                  </div>
+                </td>
+                <td  class="darker">
+                  <div>Or</div>
+                </td>
+                <td  class="darker">
+                  <div>Xor</div>
+                </td>
+                <td class="gray">
+                  <div>D</div>
+                </td>
+                <td class="lighter">
+                  <div>4</div>
+                </td>
+                <td class="lighter">
+                  <div>5</div>
+                </td>
+                <td class="lighter">
+                  <div>6</div>
+                </td>
+                <td  class="darker">
+                  <div>*</div>
+                </td>
+                <td class="gray">
+                  <div>1/x</div>
+                </td>
+              </tr>
+              <tr>
+                <td  class="darker">
+                  <div >Lsh</div>
+                </td>
+                <td  class="darker">
+                  <div>Rsh</div>
+                </td>
+                <td class="gray">
+                  <div>E</div>
+                </td>
+                <td class="lighter">
+                  <div>1</div>
+                </td>
+                <td class="lighter">
+                  <div>2</div>
+                </td>
+                <td class="lighter">
+                  <div>3</div>
+                </td>
+                <td  class="darker">
+                  <div>-</div>
+                </td>
+                <td rowspan="2" class="darker" >
+                  <div>=</div>
+                </td>
+              </tr>
+              <tr>
+                <td  class="darker" >
+                  <div>Not</div>
+                </td>
+                <td  class="darker">
+                  <div>And</div>
+                </td>
+                <td class="gray">
+                  <div>F</div>
+                </td>
+                <td colspan="2" class="lighter" >
+                  <div>0</div>
+                </td>
+                <td class="gray">
+                  <div>.</div>
+                </td>
+                <td  class="darker">
+                  <div>+</div>
+                </td>
+              </tr>
+            </table>
           </div>
-        </section>
-      </main>
+        </div>
+      </div>
     </div>
   </body>
 </html>
