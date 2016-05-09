@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 
+// SequenceInMatrix 100/100
 class MegaChecker
 {
     static void Main()

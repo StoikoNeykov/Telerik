@@ -2,6 +2,7 @@
 using System.Linq;
 
 //NOT 100/100 coz check in 1 direction ONLY 
+// for 100/100check MegaChecker
 
 class SequenceInMatrix
 {
