@@ -2,6 +2,7 @@ body {
   padding:0px;
   margin: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* unfortunally cant find the right font, but this is default for windows */
   font-size: 18px;
 }
 div {
