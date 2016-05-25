@@ -1,0 +1,85 @@
+body, div, ul, li, span, img {
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type:none;
+}
+body {
+    font-family:'Times New Roman';
+    font-size:16px;
+    color:#000;
+}
+#root {
+    width:634px;
+}
+    ul li.avenger {
+        
+        display:inline-block;
+        height:38px;
+        border-top:3px solid black;
+        border-left:3px solid black;
+        border-bottom:3px solid black;
+        float: left;
+        border-top-left-radius:15px;
+        line-height:38px;
+        position:relative;
+        font-weight:bold;
+    }
+        ul li.avenger:after {
+            clear:both;
+        }
+        ul li.avenger:hover, ul li.avenger.hover {
+            border-bottom:3px solid white;
+        }
+        ul li.avenger:hover div.preview , ul li.avenger.hover div.preview {
+            display:block;
+            position:fixed;
+            left:0px;
+            top: 44px;
+            height:265px;
+            width:625px;
+            border-right:3px solid black;
+            border-left:3px solid black;
+            border-bottom:3px solid black;
+            margin-left:2px;
+        }
+        ul li.avenger span.name {
+            padding: 0px 15px;
+        }
+        ul li.avenger div.preview {
+            background-color:#CCC;
+        }
+            ul li.avenger div.preview img {
+                width:400px;
+                height:225px;
+                border: 5px solid white;
+                border-radius:5px;
+                float:left;
+                margin:15px;
+            }
+            ul li.avenger div.preview ul  {
+                padding-top:40px;
+            }
+            ul li.avenger div.preview ul li {
+                font-weight:normal;
+                display:block;
+                text-align:center;
+                line-height:16px;
+                margin:34px;
+                font-size:1.3rem;
+            }
+                ul li.avenger div.preview ul li:hover, ul li.avenger div.preview ul li.hover {
+                    text-decoration:underline;
+                }
+                    ul li.avenger div.preview ul li:first-letter {
+                        text-transform:uppercase;
+                    }
+
+        ul li.avenger:last-of-type {
+            border-right: 3px solid black;
+        }
+
+    ul li div.preview {
+        display:none;
+    }
