@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BunnyFactory", "BunnyFactor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpDoge", "HelpDoge\HelpDoge.csproj", "{56D83506-B328-40A3-869F-33FB363BA8B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "Patterns\Patterns.csproj", "{1C2D12EC-8F23-4B62-836B-078BFDFDD35E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariableLengthCoding", "VariableLengthCoding\VariableLengthCoding.csproj", "{74D2EFB0-125C-4C20-A359-2318C04CA2A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{56D83506-B328-40A3-869F-33FB363BA8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56D83506-B328-40A3-869F-33FB363BA8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56D83506-B328-40A3-869F-33FB363BA8B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C2D12EC-8F23-4B62-836B-078BFDFDD35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2D12EC-8F23-4B62-836B-078BFDFDD35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C2D12EC-8F23-4B62-836B-078BFDFDD35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2D12EC-8F23-4B62-836B-078BFDFDD35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74D2EFB0-125C-4C20-A359-2318C04CA2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74D2EFB0-125C-4C20-A359-2318C04CA2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74D2EFB0-125C-4C20-A359-2318C04CA2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74D2EFB0-125C-4C20-A359-2318C04CA2A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
