@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCSharp", "HelloCSharp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintMyNme", "PrintMyNme\PrintMyNme.csproj", "{27F53260-660B-4640-B276-A250803F078C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "printNumbers", "printNumbers\printNumbers.csproj", "{A897ACCB-720B-4D5C-9175-B1615FF49F22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintNumbers", "printNumbers\PrintNumbers.csproj", "{A897ACCB-720B-4D5C-9175-B1615FF49F22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareRoot", "SquareRoot\SquareRoot.csproj", "{5BFE0D75-6787-4F44-A8BF-5F4C457A9761}"
 EndProject

@@ -1,2 +1,3 @@
-# Telerik
-Mainly homeworks and small projects 
+## 01. Introduction to Programming
+
+IDEs, Programming languages, compilation, C# and .NET

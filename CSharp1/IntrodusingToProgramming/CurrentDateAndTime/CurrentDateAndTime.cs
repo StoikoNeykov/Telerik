@@ -1,10 +1,15 @@
-﻿using System;
+﻿namespace IntrodusingToPrograming
+{
+    /// <summary>
+    /// Program print on the console curent datetime
+    /// </summary>
+    using System;
 
-    class CurrentDateAndTime
+    public class CurrentDateAndTime
     {
-        static void Main()
+        public static void Main()
         {
-        Console.WriteLine(DateTime.Now);
+            Console.WriteLine(DateTime.Now);
         }
     }
-
+}

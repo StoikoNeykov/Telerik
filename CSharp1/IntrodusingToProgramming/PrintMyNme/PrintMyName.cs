@@ -1,10 +1,15 @@
-﻿using System;
+﻿namespace IntrodusingToPrograming
+{
+    /// <summary>
+    /// Program print "PrintMyName" on the console
+    /// </summary>   
+    using System;
 
-    class PrintMyName
+    public class PrintMyName
     {
-        static void Main()
+        public static void Main()
         {
-        Console.WriteLine("PrintMyName");
+            Console.WriteLine("PrintMyName");
         }
     }
-
+}

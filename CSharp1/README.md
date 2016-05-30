@@ -6,4 +6,4 @@ The training is practice-oriented and involves solving hundreds of problems, whi
 
 
 
-*Unfortunally already linked solved problems in forum many times so I leave them unordered, becouse i dont want to break that links. Adding documentation that`s it. 
+*Unfortunally already linked solved problems in forum many times so I leave them unordered, becouse i dont want to break that links. Adding documentation and that`s it. 

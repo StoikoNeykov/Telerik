@@ -1,9 +1,15 @@
-﻿using System;
+﻿namespace IntrodusingToPrograming
+{
+    /// <sumary>
+    /// Standard first program in every program language
+    /// </sumary>   
+    using System;
 
-    class HelloCSharp
+    public class HelloCSharp
     {
-        static void Main()
+        public static void Main()
         {
-        Console.WriteLine("Hello, C#!");
+            Console.WriteLine("Hello, C#!");
         }
     }
+}
