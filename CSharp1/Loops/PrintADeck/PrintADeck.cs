@@ -1,21 +1,28 @@
-﻿using System;
-
-class PrintADeck
+﻿namespace Loops
 {
-    static void Main()
+    /// <summary>
+    /// Printing cards 
+    /// </summary>
+    using System;
+
+    public class PrintADeck
     {
-        string[] all = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
-        string card = Console.ReadLine();
-        int i = 0;
-        do
+        public static void Main()
         {
-            Console.WriteLine("{0} of spades, {0} of clubs, {0} of hearts, {0} of diamonds", all[i]);
-            if (all[i] == card)
+            string[] all = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
+            string card = Console.ReadLine();
+            int i = 0;
+            do
             {
-                break;
+                Console.WriteLine("{0} of spades, {0} of clubs, {0} of hearts, {0} of diamonds", all[i]);
+                if (all[i] == card)
+                {
+                    break;
+                }
+
+                i++;
             }
-            i++;
+            while (i < all.Length);
         }
-        while (i < all.Length);
     }
 }

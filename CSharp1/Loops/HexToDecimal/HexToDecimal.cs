@@ -1,31 +1,38 @@
-﻿using System;
-
-class HexToDecimal
+﻿namespace Loops
 {
-    static void Main()
+    /// <summary>
+    /// Numeral systems transforms
+    /// </summary>
+    using System;
+
+    public class HexToDecimal
     {
-        string text = Console.ReadLine();
-        char[] digits = text.ToCharArray();
-        Array.Reverse(digits);
-        Int64 result = 0;
-        Int64 pow = 1;
-        for (int i = 0; i < digits.Length; i++)
+        public static void Main()
         {
-            int curent;
-            switch (digits[i])
+            string text = Console.ReadLine();
+            char[] digits = text.ToCharArray();
+            Array.Reverse(digits);
+            Int64 result = 0;
+            Int64 pow = 1;
+            for (int i = 0; i < digits.Length; i++)
             {
-                case 'A': curent = 10; break;
-                case 'B': curent = 11; break;
-                case 'C': curent = 12; break;
-                case 'D': curent = 13; break;
-                case 'E': curent = 14; break;
-                case 'F': curent = 15; break;
-                default: curent = digits[i] - '0';  break;
+                int curent;
+                switch (digits[i])
+                {
+                    case 'A': curent = 10; break;
+                    case 'B': curent = 11; break;
+                    case 'C': curent = 12; break;
+                    case 'D': curent = 13; break;
+                    case 'E': curent = 14; break;
+                    case 'F': curent = 15; break;
+                    default: curent = digits[i] - '0'; break;
+                }
+
+                result += curent * pow;
+                pow *= 16;
             }
-            result += curent * pow;
-            pow *= 16;
+
+            Console.WriteLine(result);
         }
-        Console.WriteLine(result);
     }
 }
-

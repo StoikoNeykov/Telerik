@@ -1,24 +1,32 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
-using System.Numerics;
-
-class CatalanNumbers
+﻿namespace Loops
 {
-    static void Main()
+    /// <summary>
+    /// Calculating catalan numbers
+    /// </summary>
+    using System;
+    using System.Globalization;
+    using System.Numerics;
+    using System.Threading;
+
+    public class CatalanNumbers
     {
-        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-        int num = int.Parse(Console.ReadLine());
-        BigInteger facOut = 1;
-        BigInteger facIn = 1;
-        for (int i = num + 1; i <= 2 * num; i++)
+        public static void Main()
         {
-            facOut *= i;
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            int num = int.Parse(Console.ReadLine());
+            BigInteger facOut = 1;
+            BigInteger facIn = 1;
+            for (int i = num + 1; i <= 2 * num; i++)
+            {
+                facOut *= i;
+            }
+
+            for (int i = 1; i <= num + 1; i++)
+            {
+                facIn *= i;
+            }
+
+            Console.WriteLine(facOut / facIn);
         }
-        for (int i = 1; i <= num + 1; i++)
-        {
-            facIn *= i;
-        }
-        Console.WriteLine(facOut / facIn);
     }
 }

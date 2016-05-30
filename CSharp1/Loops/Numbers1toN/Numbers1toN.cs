@@ -1,18 +1,25 @@
-﻿using System;
-
-class Numbers1toN
+﻿namespace Loops
 {
-    static void Main()
+    /// <summary>
+    /// Printing numbers (loops practice)
+    /// </summary>
+    using System;
+
+    public class Numbers1toN
     {
-        int num = int.Parse(Console.ReadLine());
-        for (int i = 1; i < num + 1; i++)
+        public static void Main()
         {
-            Console.Write("{0}", i);
-            if (i < num)
+            int num = int.Parse(Console.ReadLine());
+            for (int i = 1; i < num + 1; i++)
             {
-                Console.Write(" ");
+                Console.Write("{0}", i);
+                if (i < num)
+                {
+                    Console.Write(" ");
+                }
             }
+
+            Console.WriteLine();
         }
-        Console.WriteLine();
     }
 }

@@ -1,17 +1,24 @@
-﻿using System;
-using System.Numerics;
-
-class CalculateAgain
+﻿namespace Loops
 {
-    static void Main()
+    /// <summary>
+    /// Factorial calculating
+    /// </summary>
+    using System;
+    using System.Numerics;
+
+    public class CalculateAgain
     {
-        int n = int.Parse(Console.ReadLine());
-        int k = int.Parse(Console.ReadLine());
-        BigInteger result = 1;
-        for (int i = k + 1; i <= n; i++)
+        public static void Main()
         {
-            result *= i;
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+            BigInteger result = 1;
+            for (int i = k + 1; i <= n; i++)
+            {
+                result *= i;
+            }
+
+            Console.WriteLine(result);
         }
-        Console.WriteLine(result);
     }
 }

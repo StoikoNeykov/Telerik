@@ -1,33 +1,40 @@
-﻿using System;
-
-class OddAndEvenProduct
+﻿namespace Loops
 {
-    static void Main()
+    /// <summary>
+    /// Calculating product numbers depend odd or even
+    /// </summary>
+    using System;
+
+    public class OddAndEvenProduct
     {
-        int num = int.Parse(Console.ReadLine());
-        string text = Console.ReadLine();
-        char[] separator = { ' ' }; //only expected separator 
-        string[] numbers = text.Split(separator);
-        double pOdd = 1;
-        double pEven = 1;
-        for (int i = 0; i < num; i++)
+        public static void Main()
         {
-            if (i % 2 == 0)
+            int num = int.Parse(Console.ReadLine());
+            string text = Console.ReadLine();
+            char[] separator = { ' ' }; //only expected separator 
+            string[] numbers = text.Split(separator);
+            double pOdd = 1;
+            double pEven = 1;
+            for (int i = 0; i < num; i++)
             {
-                pOdd *= double.Parse(numbers[i]);
+                if (i % 2 == 0)
+                {
+                    pOdd *= double.Parse(numbers[i]);
+                }
+                else
+                {
+                    pEven *= double.Parse(numbers[i]);
+                }
+            }
+
+            if (pEven == pOdd)
+            {
+                Console.WriteLine("yes {0}", pOdd);
             }
             else
             {
-                pEven *= double.Parse(numbers[i]);
+                Console.WriteLine("no {0} {1}", pOdd, pEven);
             }
-        }
-        if (pEven == pOdd)
-        {
-            Console.WriteLine("yes {0}", pOdd);
-        }
-        else
-        {
-            Console.WriteLine("no {0} {1}", pOdd, pEven);
         }
     }
 }
