@@ -1,11 +1,17 @@
-﻿using System;
-
-class MoonGravity
+﻿namespace OperatorsandExpressions
 {
-    static void Main()
+    /// <summary>
+    /// Program calculate weight on the moon
+    /// </summary>
+    using System;
+
+    public class MoonGravity
     {
-        double weight = double.Parse(Console.ReadLine());
-        double onTheMoon = (0.17 * weight);
-        Console.WriteLine("{0:F3}", onTheMoon);
+        public static void Main()
+        {
+            double weight = double.Parse(Console.ReadLine());
+            double onTheMoon = 0.17 * weight;
+            Console.WriteLine("{0:F3}", onTheMoon);
+        }
     }
 }

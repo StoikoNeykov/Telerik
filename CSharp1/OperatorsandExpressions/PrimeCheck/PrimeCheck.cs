@@ -1,26 +1,32 @@
-﻿using System;
+﻿namespace OperatorsandExpressions
+{
+    /// <summary>
+    /// Prime check 
+    /// </summary> 
+    using System;
 
-    class PrimeCheck
+    public class PrimeCheck
     {
-        static void Main()
+        public static void Main()
         {
-        int num = int.Parse(Console.ReadLine());
-        if (num <= 1)
-        {
-            Console.WriteLine("false");
-        }
-        else
-        {
-            for (int i = 2; i <= num/2 ; i++)
+            int num = int.Parse(Console.ReadLine());
+            if (num <= 1)
             {
-                if (num % i == 0)
-                {
-                    Console.WriteLine("false");
-                    return;
-                }
+                Console.WriteLine("false");
             }
-            Console.WriteLine("true");
-        }
+            else
+            {
+                for (int i = 2; i <= num / 2; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        Console.WriteLine("false");
+                        return;
+                    }
+                }
+
+                Console.WriteLine("true");
+            }
         }
     }
-
+}

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideBy7And5", "DivideBy7A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangles", "Rectangles\Rectangles.csproj", "{9EF55963-BC40-49E7-B41B-72583641CE5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thirddigit", "Thirddigit\Thirddigit.csproj", "{0F92D44A-AD70-4209-A550-55C569ABEA31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdDigit", "Thirddigit\ThirdDigit.csproj", "{0F92D44A-AD70-4209-A550-55C569ABEA31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourDigits", "FourDigits\FourDigits.csproj", "{B7D2E4CE-C577-4338-95A3-A42EE55943DA}"
 EndProject

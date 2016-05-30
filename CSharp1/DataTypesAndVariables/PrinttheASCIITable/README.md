@@ -7,7 +7,7 @@ _Note: You may need to use for-loops (learn in Internet how)._
 - None
 
 ## Output
-- The `94` characters on single line
+- Characters from `33` to `126` including on single line
 
 ## Constraints
 - Time limit: **0.1s**

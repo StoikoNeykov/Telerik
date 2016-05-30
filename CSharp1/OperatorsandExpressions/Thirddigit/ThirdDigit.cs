@@ -1,12 +1,17 @@
-﻿using System;
+﻿namespace OperatorsandExpressions
+{
+    /// <summary>
+    /// Program check if digit on the position 3 is 7 (right to left and starts from 0).
+    /// </summary>
+    using System;
 
-    class ThirdDigit
+    public class ThirdDigit
     {
-        static void Main()
+        public static void Main()
         {
-        int num = int.Parse(Console.ReadLine());
-        int ThirdDigit = (num % 1000)/100;
-        Console.WriteLine((ThirdDigit==7) ? "true" : "false " + ThirdDigit);
+            int num = int.Parse(Console.ReadLine());
+            int thirdDigit = (num % 1000) / 100;
+            Console.WriteLine((thirdDigit == 7) ? "true" : "false " + thirdDigit);
         }
     }
-
+}
