@@ -1,11 +1,18 @@
-﻿using System;
+﻿namespace DataTypesAndVariables
+{
+    /// <summary>
+    /// Program print on console ASCII characters from 33 to 126 including
+    /// </summary>
+    using System;
 
-    class PrinttheASCIITable
+    public class PrinttheASCIITable
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-        for (int i = 33; i <=126; i++)
-            Console.Write((char)i);
+            for (int i = 33; i <= 126; i++)
+            {
+                Console.Write((char)i);
+            }
         }
     }
-
+}

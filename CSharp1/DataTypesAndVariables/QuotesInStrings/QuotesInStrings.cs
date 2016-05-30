@@ -1,9 +1,15 @@
-﻿using System;
+﻿namespace DataTypesAndVariables
+{
+    /// <summary>
+    /// Program target using quotes in string. 
+    /// </summary>
+    using System;
 
-    class QuotesInStrings
+    public class QuotesInStrings
     {
-        static void Main()
+        public static void Main()
         {
-        Console.WriteLine(@"The ""use"" of quotations causes difficulties.");
+            Console.WriteLine(@"The ""use"" of quotations causes difficulties.");
         }
     }
+}
