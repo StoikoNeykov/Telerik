@@ -1,14 +1,19 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
+﻿namespace ConsoleInAndOut
+{
+    /// <summary>
+    /// Program print circle`s ara and perimeter by given radius
+    /// </summary>
+    using System;
+    using System.Globalization;
+    using System.Threading;
 
-    class Circle
+    public class Circle
     {
-        static void Main()
+        public static void Main()
         {
-        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-        double r = double.Parse(Console.ReadLine());
-        Console.WriteLine("{0:f2} {1:f2}", (2 * Math.PI * r), (Math.PI*r*r));
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            double r = double.Parse(Console.ReadLine());
+            Console.WriteLine("{0:f2} {1:f2}", 2 * Math.PI * r, Math.PI * r * r);
         }
     }
-
+}

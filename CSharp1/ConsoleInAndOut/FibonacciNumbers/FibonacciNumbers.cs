@@ -1,35 +1,42 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
-
-    class FibonacciNumbers
+﻿namespace ConsoleInAndOut
 {
-    public static double fibonacci (byte n)
-    {
-        double a = 0;
-        double b = 1;
-        for (int i = 0; i < n; i++)
-        {
-            double temp = a;
-            a = b;
-            b += temp;
-        }
-        return a;
+    /// <summary>
+    /// Program printing Fibonacci numbers
+    /// </summary>
+    using System;
+    using System.Globalization;
+    using System.Threading;
 
-    }
-    static void Main()
+    public class FibonacciNumbers
     {
-        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-        byte n = byte.Parse(Console.ReadLine());
-        for (byte i = 0; i < n; i++)
+        public static double Fibonacci(byte n)
         {
-            Console.Write(fibonacci(i));
-            if (i<n-1)
+            double a = 0;
+            double b = 1;
+            for (int i = 0; i < n; i++)
             {
-                Console.Write(", ");
+                double temp = a;
+                a = b;
+                b += temp;
             }
-        }
-        Console.WriteLine();
-       }
-    }
 
+            return a;
+        }
+
+        public static void Main()
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            byte n = byte.Parse(Console.ReadLine());
+            for (byte i = 0; i < n; i++)
+            {
+                Console.Write(Fibonacci(i));
+                if (i < n - 1)
+                {
+                    Console.Write(", ");
+                }
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
