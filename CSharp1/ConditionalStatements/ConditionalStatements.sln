@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayCard", "PlayCard\PlayCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationSign", "MultiplicationSign\MultiplicationSign.csproj", "{2FFC0272-8CA7-47BD-B98B-DEE43ED4F5C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{AF377A99-A8DA-47A2-B5F5-3B23AB24E864}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestOf3", "BiggestOf3\BiggestOf3.csproj", "{21073D2A-A220-4F45-AE79-65928D124A3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestOf5", "BiggestOf5\BiggestOf5.csproj", "{C1DA5826-983A-4048-8E36-A99F6B970995}"
@@ -45,10 +43,6 @@ Global
 		{2FFC0272-8CA7-47BD-B98B-DEE43ED4F5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FFC0272-8CA7-47BD-B98B-DEE43ED4F5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FFC0272-8CA7-47BD-B98B-DEE43ED4F5C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF377A99-A8DA-47A2-B5F5-3B23AB24E864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF377A99-A8DA-47A2-B5F5-3B23AB24E864}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF377A99-A8DA-47A2-B5F5-3B23AB24E864}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF377A99-A8DA-47A2-B5F5-3B23AB24E864}.Release|Any CPU.Build.0 = Release|Any CPU
 		{21073D2A-A220-4F45-AE79-65928D124A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{21073D2A-A220-4F45-AE79-65928D124A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21073D2A-A220-4F45-AE79-65928D124A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU

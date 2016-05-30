@@ -1,27 +1,32 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
+﻿namespace ConditionalStatements
+{
+    /// <summary>
+    /// Program finding biggest number
+    /// </summary>
+    using System;
+    using System.Globalization;
+    using System.Threading;
 
-    class BiggestOf3
+    public class BiggestOf3
     {
-        static void Main()
+        public static void Main()
         {
-        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-        double a = double.Parse(Console.ReadLine());
-        double b = double.Parse(Console.ReadLine());
-        double c = double.Parse(Console.ReadLine());
-        if (a > b && a > c)
-        {
-            Console.WriteLine(a);
-        }
-        else if (b>c)
-        {
-            Console.WriteLine(b);
-        }
-        else
-        {
-            Console.WriteLine(c);
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
+            if (a > b && a > c)
+            {
+                Console.WriteLine(a);
+            }
+            else if (b > c)
+            {
+                Console.WriteLine(b);
+            }
+            else
+            {
+                Console.WriteLine(c);
+            }
         }
     }
-    }
-
+}

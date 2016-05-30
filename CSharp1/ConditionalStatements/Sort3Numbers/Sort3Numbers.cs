@@ -1,53 +1,56 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
+﻿namespace ConditionalStatements
+{
+    /// <summary>
+    /// If-else practice program
+    /// </summary>
+    using System;
+    using System.Globalization;
+    using System.Threading;
 
-    class Sort3Numbers
+    public class Sort3Numbers
     {
-        static void Main()
+        public static void Main()
         {
-        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-        double a = double.Parse(Console.ReadLine());
-        double b = double.Parse(Console.ReadLine());
-        double c = double.Parse(Console.ReadLine());
-        if (a > b)
-        {
-            if (a > c)
-            {
-                if (b > c)
-                {
-                    Console.WriteLine("{0} {1} {2}", a, b, c);
-                }
-                else
-                {
-                    Console.WriteLine("{0} {1} {2}", a, c, b);
-                }
-            }
-            else
-            {
-                Console.WriteLine("{0} {1} {2}", c, a, b);
-            }
-        }
-        else
-        {
-            if (b > c)
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
+            if (a > b)
             {
                 if (a > c)
                 {
-                    Console.WriteLine("{0} {1} {2}", b, a, c);
+                    if (b > c)
+                    {
+                        Console.WriteLine("{0} {1} {2}", a, b, c);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} {1} {2}", a, c, b);
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("{0} {1} {2}", b, c, a);
+                    Console.WriteLine("{0} {1} {2}", c, a, b);
                 }
             }
             else
             {
-                Console.WriteLine("{0} {1} {2}", c, b, a);
+                if (b > c)
+                {
+                    if (a > c)
+                    {
+                        Console.WriteLine("{0} {1} {2}", b, a, c);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} {1} {2}", b, c, a);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("{0} {1} {2}", c, b, a);
+                }
             }
-        }    
-        }   
-            
+        }
     }
-    
-
+}
