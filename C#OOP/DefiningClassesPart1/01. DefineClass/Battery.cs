@@ -108,14 +108,11 @@
 
         public override string ToString()
         {
-            return String.Format("{0} {1} {2} {3} {4} {5} {6}", 
-                this.model == null ? String.Empty : String.Format("BatteryModel: {0}", this.model.ToString()),
-                Environment.NewLine, 
-                this.bateryType == null ? String.Empty : String.Format("BatteryType: {0}",this.bateryType.ToString()),
-                Environment.NewLine, 
-                this.hoursIdle == null ? String.Empty : String.Format("HoursIdle: {0}", this.hoursIdle.ToString()),
-                Environment.NewLine, 
-                this.hoursTalk == null ? String.Empty : String.Format("HoursTalk: {0}",this.hoursTalk.ToString())).Trim();
+            return String.Format("{0} {1} {2} {3}",
+                this.model == null ? String.Empty : String.Format("BatteryModel: {0}{1}", this.model.ToString(), Environment.NewLine),
+                this.bateryType == null ? String.Empty : String.Format("BatteryType: {0}{1}", this.bateryType.ToString(), Environment.NewLine),
+                this.hoursIdle == null ? String.Empty : String.Format("HoursIdle: {0}{1}", this.hoursIdle.ToString(), Environment.NewLine),
+                this.hoursTalk == null ? String.Empty : String.Format("HoursTalk: {0}", this.hoursTalk.ToString())).Trim();
         }
 
     }
