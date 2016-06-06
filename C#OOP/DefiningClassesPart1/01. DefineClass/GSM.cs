@@ -190,9 +190,18 @@
             this.callHistory.Add(curentCall);
         }
 
-        public void RemoveCall(Call curentCall)
+        public bool RemoveCall(Call curentCall)
         {
-            this.callHistory.Remove(curentCall);
+            foreach (Call call in callHistory)
+            {
+                if (curentCall.Equals(call))
+                {
+                    callHistory.Remove(call);
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void ClearHistory()
@@ -202,17 +211,16 @@
 
         public List<Call> CheckCalls()
         {
-            // return diferent list with diferent objects (that have same fields) BUT 
-            // that broke RemoveCall() - coz check for diferent object and do not find it
-            // var result = this.callHistory
-            //     .ConvertAll(x => new Call(x.DateTime, x.Contact, (int)x.Duration.TotalSeconds))
-            //     .ToList();
+            // return diferent list with diferent objects 
+            var result = this.callHistory
+                .ConvertAll(x => new Call(x.DateTime, x.Contact, (int)x.Duration.TotalSeconds))
+                .ToList();
 
 
             // return diferent list but with same objects
-            var result = this.callHistory      
-               .Select(x => x)
-               .ToList();
+            // var result = this.callHistory      
+            //    .Select(x => x)
+            //    .ToList();
 
 
             // return same list
@@ -227,6 +235,28 @@
                 .TotalSeconds;
 
             return (total * pricePerMinute) / 60;
+        }
+
+        public void PrintCalls()
+        {
+            Console.WriteLine();
+            Console.WriteLine("-------------List of calls-------------");
+            Console.WriteLine();
+            if (CallHistory.Count > 0)
+            {
+                foreach (Call call in CallHistory)
+                {
+                    Console.WriteLine(call.ToString());
+                }
+            }
+            else
+            {
+                Console.WriteLine("No calls available!");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("--------------End Of List--------------");
+            Console.WriteLine();
         }
 
     }

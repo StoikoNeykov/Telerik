@@ -57,13 +57,23 @@
             }
         }
 
-
         public override string ToString()
         {
             return String.Format("{0} {1}  {2}",
                 this.dateTime.ToString(@"dd/mm/yy h\:mm\:ss"),
                 this.contact.PadRight(15, ' '),
                 this.duration.ToString(@"mm\:ss"));
+        }
+
+        // in real life you cant have 2 calls with same person in same time 
+        public bool Equals(Call targetCall)
+        {
+            if (this.DateTime == targetCall.DateTime && this.Contact == targetCall.Contact)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
