@@ -237,9 +237,9 @@
             return (total * pricePerMinute) / 60;
         }
 
+        // use console itself
         public void PrintCalls()
         {
-            Console.WriteLine();
             Console.WriteLine("-------------List of calls-------------");
             Console.WriteLine();
             if (CallHistory.Count > 0)
@@ -256,8 +256,30 @@
 
             Console.WriteLine();
             Console.WriteLine("--------------End Of List--------------");
-            Console.WriteLine();
         }
 
+        // return string ready in printing format
+        public string CallsToString()
+        {
+            var result = string.Empty;
+            var begin = "-------------List of calls--------------";
+            var end = "--------------End Of List---------------";
+            if (CallHistory.Count > 0)
+            {
+                result = String.Join(Environment.NewLine, CallHistory);
+            }
+            else
+            {
+                result = "No calls available!";
+            }
+            return String.Format("{0}{1}{2}{3}{4}{5}{6}",
+                begin,
+                Environment.NewLine,
+                Environment.NewLine,
+                result,
+                Environment.NewLine,
+                Environment.NewLine,
+                end);
+        }
     }
 }

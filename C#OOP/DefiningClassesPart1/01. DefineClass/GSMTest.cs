@@ -21,7 +21,7 @@
             foreach (GSM phone in arr)
             {
                 Console.WriteLine(phone.ToString());
-                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("----------------------------------------");
             }
         }
 

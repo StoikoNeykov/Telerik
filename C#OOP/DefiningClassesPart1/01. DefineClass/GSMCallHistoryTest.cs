@@ -13,7 +13,8 @@
             phone.AddCall(new Call(DateTime.Now, "Ivan", 18));
             phone.AddCall(new Call(DateTime.Now, "Gosho", 80));
 
-            phone.PrintCalls();
+            // phone.PrintCalls();
+            Console.WriteLine(phone.CallsToString());
 
             Console.WriteLine("Total Price: {0:f2}", phone.CallsPrice(0.37));
 
@@ -37,8 +38,8 @@
 
             phone.ClearHistory();
 
-            phone.PrintCalls();
-
+            //phone.PrintCalls();
+            Console.WriteLine(phone.CallsToString());
         }
     }
 }
