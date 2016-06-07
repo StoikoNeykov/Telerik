@@ -12,8 +12,7 @@
 
     public class Battery
     {
-
-        //not rly sure how to understand battery model - make it string but will put mAh inside for now
+        // not rly sure how to understand battery model - make it string but will put mAh inside for now
         private string model;
 
         private int? hoursIdle;
@@ -51,6 +50,7 @@
             {
                 return this.model;
             }
+
             private set
             {
                 this.model = value;
@@ -63,6 +63,7 @@
             {
                 return (BateryType)this.bateryType;
             }
+
             set
             {
                 this.bateryType = value;
@@ -75,12 +76,14 @@
             {
                 return (int)this.hoursIdle;
             }
+
             private set
             {
                 if (value < 0)
                 {
                     throw new ArgumentException("HoursIdle cannot be negative number, if battery is damaged or not working please you Repair()");
                 }
+
                 this.hoursIdle = value;
             }
         }
@@ -91,29 +94,30 @@
             {
                 return (int)this.hoursTalk;
             }
+
             private set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException("HoursTalk cannot be negative number, if battery is damaged or not working please you Repair()");
+                    throw new ArgumentException("HoursTalk cannot be negative number, if battery is damaged or not working please use Repair()");
                 }
+
                 this.hoursTalk = value;
             }
         }
 
-        public string Repair()
+        public void Repair()
         {
-            return "Please do not try to repair battery. It may contains acids or other biohazard materials";
+            throw new InvalidOperationException("Please do not try to repair battery. It may contains acids or other biohazard materials");
         }
 
         public override string ToString()
         {
-            return String.Format("{0} {1} {2} {3}",
-                this.model == null ? String.Empty : String.Format("BatteryModel: {0}{1}", this.model.ToString(), Environment.NewLine),
-                this.bateryType == null ? String.Empty : String.Format("BatteryType: {0}{1}", this.bateryType.ToString(), Environment.NewLine),
-                this.hoursIdle == null ? String.Empty : String.Format("HoursIdle: {0}{1}", this.hoursIdle.ToString(), Environment.NewLine),
-                this.hoursTalk == null ? String.Empty : String.Format("HoursTalk: {0}", this.hoursTalk.ToString())).Trim();
+            return string.Format("{0} {1} {2} {3}",
+                this.model == null ? string.Empty : string.Format("BatteryModel: {0}{1}", this.model.ToString(), Environment.NewLine),
+                this.bateryType == null ? string.Empty : string.Format("BatteryType: {0}{1}", this.bateryType.ToString(), Environment.NewLine),
+                this.hoursIdle == null ? string.Empty : string.Format("HoursIdle: {0}{1}", this.hoursIdle.ToString(), Environment.NewLine),
+                this.hoursTalk == null ? string.Empty : string.Format("HoursTalk: {0}", this.hoursTalk.ToString())).Trim();
         }
-
     }
 }

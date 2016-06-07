@@ -7,7 +7,7 @@
     public class GSM
     {
         // info: http://www.gsmarena.com/apple_iphone_6s_plus-7243.php
-        private static GSM iPhone6Splus = new GSM("Iphone6Splus", "Apple",
+        private static readonly GSM iPhone6Splus = new GSM("Iphone6Splus", "Apple",
             new Battery("2750mAh", BateryType.Li_Ion, 384, 24),
             new Display(5.5, 16000000));
 
@@ -76,6 +76,7 @@
             {
                 return this.model;
             }
+
             private set
             {
                 this.model = value;
@@ -88,6 +89,7 @@
             {
                 return this.manifacturer;
             }
+
             private set
             {
                 this.manifacturer = value;
@@ -100,6 +102,7 @@
             {
                 return (double)this.price;
             }
+
             set
             {
                 if (value < 0)
@@ -116,6 +119,7 @@
             {
                 return this.owner;
             }
+
             set
             {
                 this.owner = value;
@@ -128,6 +132,7 @@
             {
                 return this.battery;
             }
+
             set
             {
                 this.battery = value;
@@ -140,6 +145,7 @@
             {
                 return this.display;
             }
+
             set
             {
                 this.display = value;
@@ -152,6 +158,7 @@
             {
                 return this.callHistory;
             }
+
             private set
             {
                 this.callHistory = value;
@@ -166,9 +173,9 @@
             }
         }
 
-        public string Repair()
+        public void Repair()
         {
-            return "The device cannot be repaired. Just buy new.";
+            throw new InvalidOperationException("The device cannot be repaired. Just buy new.");
         }
 
         public override string ToString()

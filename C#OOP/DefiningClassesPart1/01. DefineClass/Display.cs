@@ -49,15 +49,15 @@
             {
                 if (value < 2)
                 {
-                    throw new ArgumentException("Displays with less then 2 colors is count as \"broken\". Please use Repair()");
+                    throw new ArgumentException("Displays with less then 2 colors is \"broken\". Please use Repair()");
                 }
                 this.colors = value;
             }
         }
 
-        public string Repair()
+        public void Repair()
         {
-            return "The display cannot be repaired. Just buy new.";
+            throw new InvalidOperationException("The display cannot be repaired. Just buy new.");
         }
 
         public override string ToString()

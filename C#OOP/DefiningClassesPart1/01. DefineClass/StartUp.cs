@@ -10,10 +10,7 @@
         public static void Main()
         {
             GSMTest.Test();
-
             GSMCallHistoryTest.Test();
-
         }
     }
-
 }
