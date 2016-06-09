@@ -10,57 +10,50 @@
         {
             Type type = typeof(AttributesTesting);
             Console.WriteLine("Class AttributesTesting");
-            Console.WriteLine(ReturnVersionAtt(type));
+            Console.WriteLine(AttributesCheck(type));
 
             type = typeof(StartUp);
             Console.WriteLine("Class StartUp");
-            Console.WriteLine(ReturnVersionAtt(type));
+            Console.WriteLine(AttributesCheck(type));
 
             type = typeof(VersionAttribute);
             Console.WriteLine("Class VersionAttribute");
-            Console.WriteLine(ReturnVersionAtt(type));
-
-            Console.WriteLine(CheckAttributeUsage(type));
+            Console.WriteLine(AttributesCheck(type));
         }
 
-        // worst way to make it works !!!
-        public static string ReturnVersionAtt(Type type)
+        public static string AttributesCheck(Type type)
         {
-            string result = string.Empty;
-            var attributes = type.GetCustomAttributes(false);
-            foreach (var attribute in attributes)
-            {
-                try
-                {
-                    // Version do not allow miltiply -> only once will come here
-                    result += (VersionAttribute)attribute;
-                }
-                catch (Exception)
-                {
-                }
-            }
-
-            return result;
-        }
-
-        public static string CheckAttributeUsage(Type type)
-        {
-            var attributes = type.GetCustomAttributes(false);
             var output = new StringBuilder();
+            var attributes = type.GetCustomAttributes(false);
             foreach (var attribute in attributes)
             {
-                try
+                if (attribute is VersionAttribute)
                 {
-                    var result = (AttributeUsageAttribute)attribute;
-                    output.AppendLine("AttributeUsage:");
-                    output.AppendLine(string.Format("AllowMultiple: {0}", result.AllowMultiple));
-                    output.Append(string.Format("Valid on: {0}", result.ValidOn));
+                    VersionAttribute curentAttribute = attribute as VersionAttribute;
+                    output.AppendLine(VersionAttAsString(curentAttribute));
                 }
-                catch (Exception)
+                else if (attribute is AttributeUsageAttribute)
                 {
+                    AttributeUsageAttribute curentAttribute = attribute as AttributeUsageAttribute;
+                    output.AppendLine(AttUsageAttAsString(curentAttribute));
                 }
+
             }
             return output.ToString();
+        }
+
+        private static string AttUsageAttAsString(AttributeUsageAttribute curentAttribute)
+        {
+            var output = new StringBuilder();
+            output.AppendLine("AttributeUsage:");
+            output.AppendLine(string.Format("AllowMultiple: {0}", curentAttribute.AllowMultiple));
+            output.Append(string.Format("Valid on: {0}", curentAttribute.ValidOn));
+            return output.ToString();
+        }
+
+        private static string VersionAttAsString(VersionAttribute curentAttribute)
+        {
+            return curentAttribute.ToString();
         }
     }
 }
