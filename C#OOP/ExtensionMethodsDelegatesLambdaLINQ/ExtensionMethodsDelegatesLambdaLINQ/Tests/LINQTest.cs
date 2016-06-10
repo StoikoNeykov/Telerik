@@ -13,19 +13,25 @@
             var students = HardCodeStudents();
 
             var result = students.FirstBeforeLast();
-            PrintEach(result);
+            result.ForEach(x => Console.WriteLine(x.FullName));
+            PrintLine();
             result = LINQWorks.FirstBeforeLast(students);
-            PrintEach(result);
+            result.ForEach(x => Console.WriteLine(x.FullName));
+            PrintLine();
 
             var otherResult = students.InAgeRange(18, 25);
-            PrintStrings(otherResult);
+            otherResult.ForEach(x => Console.WriteLine(x));
+            PrintLine();
             otherResult = LINQWorks.InAgeRange(students, 18, 25);
-            PrintStrings(otherResult);
+            otherResult.ForEach(x => Console.WriteLine(x));
+            PrintLine();
 
             result = students.StudentsSort();
-            PrintEach(result);
+            result.ForEach(x => Console.WriteLine(x.FullName));
+            PrintLine();
             result = LINQWorks.StudentsSort(students);
-            PrintEach(result);
+            result.ForEach(x => Console.WriteLine(x.FullName));
+            PrintLine();
 
             var numbers = new[] { 4, 19, 21, 144, 48, 84, 96, 12, 7, 100, 0, 13, -5, 12, 3, 7 };
             PrintNumbers(numbers);
@@ -36,27 +42,11 @@
             PrintNumbers(numResult);
         }
 
+        private static void PrintLine()=> Console.WriteLine("-----------------------");
+
         private static void PrintNumbers(int[] numbers)
         {
             Console.WriteLine(string.Join(" ", numbers));
-        }
-
-        private static void PrintStrings(string[] otherResult)
-        {
-            foreach (var name in otherResult)
-            {
-                Console.WriteLine(name);
-            }
-            Console.WriteLine("-----------------------");
-        }
-
-        private static void PrintEach(Student[] result)
-        {
-            foreach (var student in result)
-            {
-                Console.WriteLine(student.FullName);
-            }
-            Console.WriteLine("-----------------------");
         }
 
         private static Student[] HardCodeStudents()

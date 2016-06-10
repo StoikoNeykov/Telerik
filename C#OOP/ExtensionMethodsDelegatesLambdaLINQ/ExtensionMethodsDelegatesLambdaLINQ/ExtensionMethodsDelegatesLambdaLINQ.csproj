@@ -51,7 +51,7 @@
     <Compile Include="LINQ\Student.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\IEnumerationTest.cs" />
+    <Compile Include="Tests\IEnumerableTest.cs" />
     <Compile Include="Tests\LINQTest.cs" />
     <Compile Include="Tests\StringbuilderTest.cs" />
   </ItemGroup>

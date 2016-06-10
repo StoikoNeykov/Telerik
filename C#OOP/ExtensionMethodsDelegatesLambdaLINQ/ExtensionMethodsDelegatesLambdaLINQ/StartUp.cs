@@ -13,9 +13,9 @@
 
             // StringbuilderTest.Test();
 
-            // IEnumerationTest.Test();
+            IEnumerableTest.Test();
 
-            LINQTest.Test();
+            // LINQTest.Test();
         }
     }
 }
