@@ -49,8 +49,12 @@
         public void Remove(int index)
         {
             this.OutOfRangeCheck(index);
-            this.generic[index] = default(T);
-
+            this.index--;
+            for (int i = index; i < this.index - 1; i++)
+            {
+                generic[i] = generic[i + 1];
+            }
+            // posible to use generic[this.index]=default(T) BUT its "out of curent list" no matter hidden array keep this T
         }
 
         public T this[int index]
@@ -69,7 +73,7 @@
 
         public void OutOfRangeCheck(int index)
         {
-            if (index < 0 || index > this.generic.Length - 1)
+            if (index < 0 || index > this.index - 1)
             {
                 throw new IndexOutOfRangeException("Index out of range! Hold your horses!");
             }
