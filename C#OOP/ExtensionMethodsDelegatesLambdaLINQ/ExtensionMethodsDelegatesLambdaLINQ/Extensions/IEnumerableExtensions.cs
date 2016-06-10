@@ -114,9 +114,9 @@
         }
 
         // !! Returns T - that mean Average of int is int
-        public static T AnotherMyAverage<T>(this IEnumerable<T> collection)
+        public static T AnotherMyAverage<T>(this IEnumerable<T> collection) where T : IConvertible
         {
-            return MyTAverage(collection.AnotherMySum(),collection.Count());
+            return MyTAverage(collection.AnotherMySum(), collection.Count());
         }
 
         private static T Add<T>(T a, T b)
@@ -137,13 +137,14 @@
             return multyply(a, b);
         }
 
-        private static T MyTAverage<T>(T a, int b)
+        private static T MyTAverage<T>(T a, int b) where T : IConvertible
         {
+            T converted = (T)Convert.ChangeType(b, typeof(T));
             ParameterExpression paramA = Expression.Parameter(typeof(T), "a");
             ParameterExpression paramB = Expression.Parameter(typeof(T), "b");
-            BinaryExpression body = Expression.Divide (paramA, paramB);
-            Func<T, int, T> avrg = Expression.Lambda<Func<T, int, T>>(body, paramA, paramB).Compile();
-            return avrg(a, b);
+            BinaryExpression body = Expression.Divide(paramA, paramB);
+            Func<T, T, T> avrg = Expression.Lambda<Func<T, T, T>>(body, paramA, paramB).Compile();
+            return avrg(a, converted);
         }
     }
 }

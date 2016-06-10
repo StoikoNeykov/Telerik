@@ -36,7 +36,12 @@
             // Average returns T 
             Console.WriteLine(someCollection.AnotherMyAverage());
 
-
+            Console.WriteLine("--------------------");
+            Console.WriteLine(doubleArray.AnotherMySum());
+            Console.WriteLine(doubleArray.AnotherMyMax());
+            Console.WriteLine(doubleArray.AnotherMyMin());
+            Console.WriteLine(doubleArray.AnotherMyProduct());
+            Console.WriteLine(doubleArray.AnotherMyAverage());
         }
     }
 }
