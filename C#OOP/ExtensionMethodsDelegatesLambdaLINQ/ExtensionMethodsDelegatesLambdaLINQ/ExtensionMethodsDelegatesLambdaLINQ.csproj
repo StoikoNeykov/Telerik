@@ -43,18 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CovergentSeries\Calculator.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Extensions\IntArrayExtensions.cs" />
     <Compile Include="Extensions\StringBuilderExtensions.cs" />
-    <Compile Include="Extensions\StudentsArrayExtensions.cs" />
+    <Compile Include="Extensions\StudentsCollectionsExtensions.cs" />
     <Compile Include="LINQ\Group.cs" />
     <Compile Include="LINQ\LINQWorks.cs" />
     <Compile Include="LINQ\Student.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\CovergentSeriesTest.cs" />
     <Compile Include="Tests\IEnumerableTest.cs" />
     <Compile Include="Tests\LINQTest.cs" />
     <Compile Include="Tests\StringbuilderTest.cs" />
+    <Compile Include="Tests\TimerTest.cs" />
+    <Compile Include="Timer\Subscriber.cs" />
+    <Compile Include="Timer\Timer.cs" />
+    <Compile Include="Timer\TimerEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -154,6 +154,7 @@
             var students = HardCodeStudents();
             var groups = GroupsGenerator();
 
+            // join groups and students by their GroupNumbers
             students
                  .Join(groups,
                      st => st.GroupNumber,
@@ -170,7 +171,30 @@
             //    .ForEach(x => Console.WriteLine($"{x.DepartmentName} {x.FullName}"));
             PrintLine();
 
+            var strings = GetStrings();
 
+            // Print longest string in array of strings
+            var result = strings
+                .OrderByDescending(x => x.Length)
+                .FirstOrDefault();
+            Console.WriteLine(result);
+            PrintLine();
+        }
+
+        public static void Test5()
+        {
+            var students = HardCodeStudents();
+            // Split collection of Student to sub-collections of Student (IEnumerable<IEnumerable<T>> where T : Student)
+            // with normal method
+            var result = LINQWorks.StudentsByGroups(students);
+            result.ForEach(x => x.ForEach(y => Console.WriteLine($"{y.FullName} group: {y.GroupNumber}")));
+            PrintLine();
+
+            // with ext method
+            students
+                .StudentsByGroups()
+                .ForEach(x => x.ForEach(y => Console.WriteLine($"{y.FullName} group: {y.GroupNumber}")));
+            PrintLine();
         }
 
         // the new way to make methods from C# 6 
@@ -207,6 +231,23 @@
             result[2] = new Group(3, "Physics");
             result[3] = new Group(4, "Philosophy");
             result[4] = new Group(5, "Biology");
+
+            return result;
+        }
+
+        private static string[] GetStrings()
+        {
+            var result = new string[10];
+            result[0] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id.";
+            result[1] = "Sed et feugiat lacus, vel rhoncus elit. Nulla quis ultrices magna. In fringilla nibh elit, in tempus quam posuere a.";
+            result[2] = "Proin pharetra dui id est volutpat, sit amet ultrices lacus egestas. Proin luctus tellus et malesuada elementum.";
+            result[3] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec elementum orci.";
+            result[4] = "Mauris consectetur pretium justo eget tempus. Proin gravida euismod sapien ultrices facilisis.";
+            result[5] = "Nunc ante sem, aliquam ut ornare nec, congue a ante. Nam viverra felis vitae arcu sodales, vitae maximus libero bibendum.";
+            result[6] = "Cras arcu turpis, scelerisque et nisl eu, sodales scelerisque arcu.";
+            result[7] = "Pellentesque venenatis sodales magna et venenatis. Donec ante elit, consectetur nec vulputate id, rhoncus at quam.";
+            result[8] = "Vestibulum blandit semper ex et tempus. Nulla tempor, erat accumsan tincidunt ultrices, arcu mauris commodo diam, quis blandit magna eros ut odio.";
+            result[9] = "Mauris congue malesuada ex, vel porta nisi cursus faucibus.";
 
             return result;
         }

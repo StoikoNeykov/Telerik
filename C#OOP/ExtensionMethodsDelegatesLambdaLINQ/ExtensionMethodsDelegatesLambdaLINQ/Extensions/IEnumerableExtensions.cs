@@ -81,7 +81,7 @@
         }
 
         // Better dont read below this line ! 
-        // Another group of methods that doing almsot same but using delegate, T operations and expresions (ofc copy/past part of it) 
+        // Another group of methods that doing almost same but using delegate, T operations and expresions (ofc copy/past part of it) 
         // WARNING: Low quality program code posible (aka bad code)
 
         // useful ext method that foreach collections for me but take Func. Returns T

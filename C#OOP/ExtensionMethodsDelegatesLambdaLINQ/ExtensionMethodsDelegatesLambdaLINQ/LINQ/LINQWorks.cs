@@ -16,7 +16,7 @@
         }
 
         //return collection of students in specific age interval. Actually their full names as strings
-        public static IEnumerable<string> InAgeRange<T>(IEnumerable<T> students, int min, int max) where T: Student
+        public static IEnumerable<string> InAgeRange<T>(IEnumerable<T> students, int min, int max) where T : Student
         {
             var result = students
                 .Where(x => x.Age >= min && x.Age <= max)
@@ -26,7 +26,7 @@
         }
 
         // return collection of students sorted lexicographically by decending 1st by first name then by last name
-        public static IEnumerable<T> StudentsSort<T>(IEnumerable<T> students) where T: Student
+        public static IEnumerable<T> StudentsSort<T>(IEnumerable<T> students) where T : Student
         {
             var result = students
                 .OrderByDescending(x => x.FirstName)
@@ -46,7 +46,7 @@
         }
 
         // return collection of students from specific group
-        public static IEnumerable<T> StudentsFromGroup<T>(IEnumerable<T> students, int group) where T:Student
+        public static IEnumerable<T> StudentsFromGroup<T>(IEnumerable<T> students, int group) where T : Student
         {
             var result = students
                 .Where(x => x.GroupNumber == 2)
@@ -55,7 +55,7 @@
         }
 
         // return collection of students with specific mail domain
-        public static IEnumerable<T> StudentsByMailDomain<T>(IEnumerable<T> students, string domain) where T: Student
+        public static IEnumerable<T> StudentsByMailDomain<T>(IEnumerable<T> students, string domain) where T : Student
         {
             var result = students
                 .Where(x => x.Mail.Split('@').Last() == domain)
@@ -64,13 +64,22 @@
         }
 
         // return collection of students with specific phone number group (can be used to find person from specific coutry for example)
-        public static IEnumerable<T> StudentsByPhone<T>(IEnumerable<T> students, int phoneGroup, string expectedGroupContain) where T:Student
+        public static IEnumerable<T> StudentsByPhone<T>(IEnumerable<T> students, int phoneGroup, string expectedGroupContain) where T : Student
         {
             var result = students
                 .Where(x => x.Tel.Split(' ')
                                 .Skip(phoneGroup - 1)
                                 .FirstOrDefault() == expectedGroupContain)
                 .ToArray();
+            return result;
+        }
+
+        public static IEnumerable<IEnumerable<T>> StudentsByGroups<T>(IEnumerable<T> students) where T : Student
+        {
+            var result = students
+                .OrderBy(x=>x.GroupNumber)
+                .GroupBy(x => x.GroupNumber)
+                .Cast<IEnumerable<T>>();
             return result;
         }
     }

@@ -9,7 +9,7 @@
     {
         public static void Main()
         {
-            // I use comments to execute only tests I want
+            // I use comments to execute only test I want
 
             // StringbuilderTest.Test();
 
@@ -22,6 +22,12 @@
             // LINQTest.Test3();
 
             // LINQTest.Test4();
+
+            // TimerTest.Test();
+
+            // LINQTest.Test5();
+
+            // CovergentSeriesTest.Test();
         }
     }
 }
