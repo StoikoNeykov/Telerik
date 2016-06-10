@@ -4,6 +4,9 @@
     using System.Text;
     using ExtensionMethodsDelegatesLambdaLINQ.Extensions;
 
+    /// <summary>
+    /// Tests over StringBuilder ext methods
+    /// </summary>
     public static class StringbuilderTest
     {
         public static void Test()

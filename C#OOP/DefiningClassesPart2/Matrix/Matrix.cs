@@ -3,6 +3,10 @@
     using System;
     using System.Text;
 
+    /// <summary>
+    /// Implement matrix and some base matrix operators
+    /// </summary>
+    /// <typeparam name="T"> struct, Icomparable </typeparam>
     public class Matrix<T> where T : struct, IComparable
 
     {
@@ -142,6 +146,7 @@
             return result;
         }
 
+        // check for all zero elements
         private bool ZeroCheck()
         {
             for (int i = 0; i < this.Rows; i++)

@@ -2,6 +2,9 @@
 {
     using System.Collections.Generic;
 
+    /// <summary>
+    /// Test class of students for LINQ trainings 
+    /// </summary>
     public class Student
     {
         public Student()

@@ -2,14 +2,9 @@
 {
     using System;
 
-    public enum BateryType
-    {
-        Li_Ion,
-        Li_Poly,
-        NiCd,
-        NiMH
-    }
-
+    /// <summary>
+    /// Mobile phone battery. Fields are nullable
+    /// </summary>
     public class Battery
     {
         // not rly sure how to understand battery model - make it string but will put mAh inside for now
@@ -106,6 +101,7 @@
             }
         }
 
+        // this method is just a joke 
         public void Repair()
         {
             throw new InvalidOperationException("Please do not try to repair battery. It may contains acids or other biohazard materials");

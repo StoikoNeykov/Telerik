@@ -4,6 +4,9 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    /// <summary>
+    /// Path is group of Point3D objects.
+    /// </summary>
     public class Path
     {
         private List<Point3D> path;
@@ -58,9 +61,9 @@
             
         }
 
+        // format {x1, y1, z1} {x2, y2, z2} {x3, y3, z3} ... 
         public static Path Parse(string text)
-        {
-            // format {x1,y1,z1} {x2,y2,z2} {x3,y3,z3} ... 
+        { 
             if (text == "This path is empty")
             {
                 return new Path();

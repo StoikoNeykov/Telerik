@@ -5,6 +5,9 @@
     /// </summary>
     using System;
 
+    /// <summary>
+    /// Testing GMS class 
+    /// </summary>
     public static class GSMTest
     {
         public static void Test()

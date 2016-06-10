@@ -1,5 +1,8 @@
 ﻿namespace Attributes
 {
+    /// <summary>
+    /// Basic attribute skills. 
+    /// </summary>
     [Version(1,0)]
     public static class StartUp
     {

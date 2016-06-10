@@ -2,6 +2,10 @@
 {
     using System;
 
+    /// <summary>
+    /// Mobile phone display. Warning: defaul color is count as color - if you set colors = 1 you can expect exception!
+    /// All fields are nulalble
+    /// </summary>
     public class Display
     {
         private double? size;
@@ -55,6 +59,7 @@
             }
         }
 
+        // just a joke
         public void Repair()
         {
             throw new InvalidOperationException("The display cannot be repaired. Just buy new.");

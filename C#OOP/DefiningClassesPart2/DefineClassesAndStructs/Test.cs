@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Class for testing Point3D and Path
+    /// </summary>
     public static class Test
     {
         public static void PointAndPathTest()

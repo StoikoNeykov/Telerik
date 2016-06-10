@@ -4,6 +4,9 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    /// <summary>
+    /// Mobile phone class. Nullable fields
+    /// </summary>
     public class GSM
     {
         // info: http://www.gsmarena.com/apple_iphone_6s_plus-7243.php
@@ -173,6 +176,7 @@
             }
         }
 
+        // joke
         public void Repair()
         {
             throw new InvalidOperationException("The device cannot be repaired. Just buy new.");
@@ -216,6 +220,7 @@
             this.callHistory.Clear();
         }
 
+        // returns diferent list with diferent objects. Not references
         public List<Call> CheckCalls()
         {
             // return diferent list with diferent objects 

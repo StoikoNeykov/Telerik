@@ -1,7 +1,9 @@
 ﻿namespace Matrix
 {
     using System;
-
+    /// <summary>
+    /// Tests on matrices
+    /// </summary>
     public static class Test
     {
         public static void MatrixTest()
@@ -45,6 +47,7 @@
             Console.WriteLine(multyResult);
         }
 
+        // filling matrix with 2 for loops: i+j
         public static void FillSum(Matrix<int> curentMatrix)
         {
             for (int i = 0; i < curentMatrix.Rows; i++)
@@ -56,6 +59,7 @@
             }
         }
 
+        // filling matrix with 2 for loops: all with 1
         public static void FillOne(Matrix<int> curentMatrix)
         {
             for (int i = 0; i < curentMatrix.Rows; i++)
@@ -67,6 +71,7 @@
             }
         }
 
+        // filling matrix with 2 for loops: i*j
         public static void FillMulty(Matrix<int> curentMatrix)
         {
             for (int i = 0; i < curentMatrix.Rows; i++)

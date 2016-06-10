@@ -3,6 +3,9 @@
     using System;
     using System.Text;
 
+    /// <summary>
+    /// Class that testing other classes 
+    /// </summary>
     [Version(0, 56)]
     public class AttributesTesting
     {
@@ -21,6 +24,7 @@
             Console.WriteLine(AttributesCheck(type));
         }
 
+        // take type, separate attributes and call methods that return info about
         public static string AttributesCheck(Type type)
         {
             var output = new StringBuilder();
@@ -42,6 +46,7 @@
             return output.ToString();
         }
 
+        // return info for AttributeUsageAttribute
         private static string AttUsageAttAsString(AttributeUsageAttribute curentAttribute)
         {
             var output = new StringBuilder();
@@ -51,6 +56,7 @@
             return output.ToString();
         }
 
+        // return information for VersionAttribute
         private static string VersionAttAsString(VersionAttribute curentAttribute)
         {
             return curentAttribute.ToString();

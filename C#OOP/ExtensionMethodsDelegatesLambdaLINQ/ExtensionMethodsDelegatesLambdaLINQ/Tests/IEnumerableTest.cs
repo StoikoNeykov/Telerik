@@ -4,6 +4,9 @@
     using System.Collections.Generic;
     using ExtensionMethodsDelegatesLambdaLINQ.Extensions;
 
+    /// <summary>
+    /// Class for testing IEnumerable<T> ext methods
+    /// </summary>
     public static class IEnumerableTest
     {
         public static void Test()
@@ -27,7 +30,7 @@
             Console.WriteLine(doubleArray.MySum());
             Console.WriteLine(doubleArray.MyAverage());
 
-            // sick Tests
+            // sick Tests - for extra methods that works with T operators (its extra testing and can be skipped)
             Console.WriteLine("--------------------" );
             Console.WriteLine(someCollection.AnotherMySum());
             Console.WriteLine(someCollection.AnotherMyProduct());

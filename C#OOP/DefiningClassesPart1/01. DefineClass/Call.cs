@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Every call is a object. Duration is TimeSpan
+    /// </summary>
     public class Call
     {
         private DateTime dateTime;

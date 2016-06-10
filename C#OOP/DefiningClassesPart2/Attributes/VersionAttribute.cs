@@ -2,6 +2,10 @@
 {
     using System;
 
+    /// <summary>
+    /// Custom attribute. Hold information about version of the file
+    /// </summary>
+
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface |
         AttributeTargets.Enum, AllowMultiple = false)]
     [Version (1,5)]

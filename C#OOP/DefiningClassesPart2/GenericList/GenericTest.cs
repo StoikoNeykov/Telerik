@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Generic List testing
+    /// </summary>
     public static class GenericTest
     {
         public static void Test()

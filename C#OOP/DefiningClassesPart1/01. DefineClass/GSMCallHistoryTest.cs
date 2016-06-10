@@ -3,6 +3,9 @@
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// Testing GMS calls methods
+    /// </summary>
     public static class GSMCallHistoryTest
     {
         public static void Test()

@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Calc distance between 2 Point3D objects
+    /// </summary>
     public static class CalcPointsDistance
     {
         public static decimal PointsDistance(Point3D first, Point3D second)

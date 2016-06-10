@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Struct that hold information about point in 3D
+    /// </summary>
     public struct Point3D
     {
         private static readonly Point3D O = new Point3D(0m, 0m, 0m);
@@ -66,6 +69,7 @@
             return string.Format("{{{0}, {1}, {2}}}", this.CoordX, this.CoordY, this.CoordZ);
         }
 
+        // is not override coz standart Equals expect any type of object. My method works with Point3D 
         public bool Equals(Point3D curentPoint)
         {
             if (this.CoordX == curentPoint.CoordX &&
@@ -77,9 +81,9 @@
             return false;
         }
 
+        // string must be in format {x, y, z} 
         public static Point3D Parse(string text)
         {
-            // string must be in format {x,y,z} 
             var result = text.Split(new[] { " ", ",", "{", "}" }, StringSplitOptions.RemoveEmptyEntries);
             return new Point3D(decimal.Parse(result[0]), decimal.Parse(result[1]), decimal.Parse(result[2]));
         }

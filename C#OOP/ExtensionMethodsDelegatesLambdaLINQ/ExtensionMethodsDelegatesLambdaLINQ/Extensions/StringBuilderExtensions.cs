@@ -22,7 +22,7 @@
             return output;
         }
 
-        public static void Validate(StringBuilder input, int index, int lenght = 0)
+        private static void Validate(StringBuilder input, int index, int lenght = 0)
         {
             if (index < 0 || index > input.Length)
             {

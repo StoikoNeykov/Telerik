@@ -47,6 +47,7 @@
     <Compile Include="Extensions\IntArrayExtensions.cs" />
     <Compile Include="Extensions\StringBuilderExtensions.cs" />
     <Compile Include="Extensions\StudentsArrayExtensions.cs" />
+    <Compile Include="LINQ\Group.cs" />
     <Compile Include="LINQ\LINQWorks.cs" />
     <Compile Include="LINQ\Student.cs" />
     <Compile Include="StartUp.cs" />

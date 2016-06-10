@@ -2,6 +2,10 @@
 {
     using System;
 
+    /// <summary>
+    /// Implementation of Generic List
+    /// </summary>
+    /// <typeparam name="T"> Icomparable </typeparam>
     public class GenericList<T> where T : IComparable
     {
         private T[] generic;
