@@ -74,12 +74,11 @@
             return result;
         }
 
-        public static IEnumerable<IEnumerable<T>> StudentsByGroups<T>(IEnumerable<T> students) where T : Student
+        public static IEnumerable<IGrouping<int, T>> StudentsByGroups<T>(IEnumerable<T> students) where T : Student
         {
             var result = students
-                .OrderBy(x=>x.GroupNumber)
-                .GroupBy(x => x.GroupNumber)
-                .Cast<IEnumerable<T>>();
+                .OrderBy(x => x.GroupNumber)
+                .GroupBy(x => x.GroupNumber);
             return result;
         }
     }

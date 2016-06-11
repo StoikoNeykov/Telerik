@@ -68,12 +68,11 @@
         }
 
         // split collection of Student to sub-collections of Student by their groupNumber
-        public static IEnumerable<IEnumerable<T>> StudentsByGroups<T>(this IEnumerable<T> students) where T : Student
+        public static IEnumerable<IGrouping<int, T>> StudentsByGroups<T>(this IEnumerable<T> students) where T : Student
         {
             var result = students
                 .OrderBy(x => x.GroupNumber)
-                .GroupBy(x => x.GroupNumber)
-                .Cast<IEnumerable<T>>();
+                .GroupBy(x => x.GroupNumber);
             return result;
         }
     }

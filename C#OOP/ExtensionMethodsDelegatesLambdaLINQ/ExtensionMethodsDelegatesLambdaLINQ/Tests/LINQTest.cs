@@ -184,17 +184,28 @@
         public static void Test5()
         {
             var students = HardCodeStudents();
-            // Split collection of Student to sub-collections of Student (IEnumerable<IEnumerable<T>> where T : Student)
+            // Split collection of Student to sub-collections of Student (IEnumerable<IGrouping<int, T>> where T : Student)
             // with normal method
             var result = LINQWorks.StudentsByGroups(students);
-            result.ForEach(x => x.ForEach(y => Console.WriteLine($"{y.FullName} group: {y.GroupNumber}")));
+            result
+                .ForEach(x =>
+                {
+                    Console.WriteLine($"Group: {x.Key}");
+                    x.ForEach(y => Console.WriteLine($"{y.FullName}"));
+                });
             PrintLine();
 
             // with ext method
             students
                 .StudentsByGroups()
-                .ForEach(x => x.ForEach(y => Console.WriteLine($"{y.FullName} group: {y.GroupNumber}")));
+                .ForEach(x =>
+                {
+                    Console.WriteLine($"Group: {x.Key}");
+                    x.ForEach(y => Console.WriteLine($"{y.FullName}"));
+                });
             PrintLine();
+
+            
         }
 
         // the new way to make methods from C# 6 
