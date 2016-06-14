@@ -1,9 +1,11 @@
 ﻿namespace SchoolClasses.Models
 {
+    using System;
     using SchoolClasses.Interfaces;
 
     /// <summary> 
-    /// Represent student 
+    /// Represent student. Have own name. ClassIdent and NumberInClass can be set with Add him/her
+    /// in specific class. NumberInClass is unique. Student can be part of 1 class only! 
     /// </summary>
     public class Student : Person, IPerson, ICommentable
     {
@@ -19,20 +21,14 @@
 
         }
 
-        // making copy of student 
-        private Student(Student studentForCopy)
-            : base (studentForCopy.Name)
-        {
-            this.NumberInClass = studentForCopy.NumberInClass;
-            this.ClassIdent = studentForCopy.ClassIdent;
-            this.Comment = studentForCopy.Comment;
-        }
-
-        // can be move out in Person class but not every person have to be commentable
         public string Comment
         {
             get
             {
+                if (string.IsNullOrEmpty(this.comment))
+                {
+                    return "Still no comments for this student!";
+                }
                 return this.comment;
             }
             set
@@ -65,27 +61,18 @@
             }
         }
 
-        public override bool Equals(object student)
+        public override string ToString()
         {
-            if (!(student is Student))
-            {
-                return false;
-            }
-
-            var other = student as Student;
-            if (this.Name == other.Name
-                && this.NumberInClass == other.NumberInClass
-                && this.ClassIdent == other.ClassIdent)
-            {
-                return true;
-            }
-
-            return false;
+            return this.Name;
         }
 
-        internal Student CopyStudent()
+        public string FullString()
         {
-            return new Student(this);
+            return string.Format("{0}:{3} class: {1}{3} number in class: {2}",
+                this.Name,
+                this.ClassIdent ?? "none",
+                this.NumberInClass,
+                Environment.NewLine);
         }
     }
 }

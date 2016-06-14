@@ -3,6 +3,10 @@
     using SchoolClasses.Interfaces;
     using System;
 
+    /// <summary>
+    /// Represent school discipline. Hold name, number of lectures and number of exercises.
+    /// Name is readonly.
+    /// </summary>
     public class Discipline : ICommentable
     {
         private string name;
@@ -23,14 +27,6 @@
         {
             this.NumberOfExercises = numberOfExercises;
             this.NumberOfLectures = numberOfLectures;
-        }
-
-        private Discipline(Discipline disciplineForCopy)
-        {
-            this.Name = disciplineForCopy.Name;
-            this.NumberOfExercises = disciplineForCopy.NumberOfExercises;
-            this.NumberOfLectures = disciplineForCopy.NumberOfLectures;
-            this.Comment = disciplineForCopy.Comment;
         }
 
         public string Name
@@ -86,6 +82,11 @@
         {
             get
             {
+                if (string.IsNullOrEmpty(this.comment))
+                {
+                    return "Still no comments for this discipline!";
+                }
+
                 return this.comment;
             }
             set
@@ -94,28 +95,18 @@
             }
         }
 
-        internal Discipline CopyDiscipline()
+        public override string ToString()
         {
-            return new Discipline(this);
+            return this.Name;
         }
 
-        public override bool Equals(object discipline)
+        public string FullString()
         {
-            if (!(discipline is Discipline))
-            {
-                return false;
-            }
-
-            var other = discipline as Discipline;
-            if (this.Name == other.Name
-                && this.NumberOfExercises == other.NumberOfExercises
-                && this.NumberOfLectures == other.NumberOfLectures
-                && this.Comment == other.Comment)
-            {
-                return true;
-            }
-
-            return false;
+            return string.Format("{0}{1} Number of lectures: {2}{1} Number of exercises: {3}",
+                this.Name,
+                Environment.NewLine,
+                this.NumberOfLectures,
+                this.NumberOfExercises);
         }
     }
 }

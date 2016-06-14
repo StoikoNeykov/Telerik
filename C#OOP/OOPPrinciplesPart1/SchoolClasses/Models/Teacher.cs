@@ -2,10 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
 
     using SchoolClasses.Interfaces;
 
+    /// <summary>
+    /// Represent teacher as person. Hold name and list of disciplines
+    /// </summary>
     public class Teacher : Person, IPerson, ICommentable
     {
         private string comment;
@@ -18,18 +20,14 @@
             this.Disciplines = new List<Discipline>();
         }
 
-        private Teacher(Teacher teacherForCopy)
-            : base(teacherForCopy.Name)
-        {
-            this.Disciplines = new List<Discipline>(teacherForCopy.Disciplines);
-            this.Comment = teacherForCopy.Comment;
-        }
-
-        // can be move out in Person class but not every person have to be commentable
         public string Comment
         {
             get
             {
+                if (string.IsNullOrEmpty(this.comment))
+                {
+                    return "Still no comment available for this teacher!";
+                }
                 return this.comment;
             }
             set
@@ -42,26 +40,12 @@
         {
             get
             {
-                var result = new List<Discipline>();
-                if (this.Disciplines.Count > 0)
-                {
-                    foreach (var dis in this.Disciplines)
-                    {
-                        result.Add(dis.CopyDiscipline());
-                    }
-                }
-
-                return result;
+                return new List<Discipline>(this.disciplines);
             }
             private set
             {
                 this.disciplines = value;
             }
-        }
-
-        internal Teacher CopyTeacher()
-        {
-            return new Teacher(this);
         }
 
         public void AddDiscipline(Discipline discipline)
@@ -99,23 +83,18 @@
             return false;
         }
 
-        public override bool Equals(object teacher)
+        public override string ToString()
         {
-            if (!(teacher is Teacher))
-            {
-                return false;
-            }
+            return this.Name;
+        }
 
-            var other = teacher as Teacher;
-            if (this.Disciplines.SequenceEqual(other.Disciplines)
-                && this.Comment == other.Comment
-                && this.Comment == other.Comment)
-            {
-                return true;
-            }
-
-            return false;
-
+        public string FullString()
+        {
+            var separator = Environment.NewLine;
+            return string.Format("{0}:{1}Disciplines:{1}{2}",
+                this.Name,
+                Environment.NewLine,
+                string.Join(separator, this.Disciplines));
         }
     }
 }

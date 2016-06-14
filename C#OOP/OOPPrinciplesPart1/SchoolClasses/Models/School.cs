@@ -1,8 +1,12 @@
 ﻿namespace SchoolClasses.Models
 {
+
     using System;
     using System.Collections.Generic;
 
+    /// <summary>
+    /// Represent school system. Mainly contains list of classes and name
+    /// </summary>
     public class School
     {
         private string name;
@@ -12,22 +16,18 @@
         public School(string name)
         {
             this.Name = name;
-            this.classes = new List<ClassOfStudents>();
+            this.Classes = new List<ClassOfStudents>();
         }
 
         public List<ClassOfStudents> Classes
         {
             get
             {
-                var schList = new List<ClassOfStudents>();
-                if (Classes.Count > 0)
-                {
-                    foreach (var cls in this.Classes)
-                    {
-                        schList.Add(cls.CopyClass());
-                    }
-                }
-                return schList;
+                return new List<ClassOfStudents>(this.classes);
+            }
+            set
+            {
+                this.classes = value;
             }
         }
 
@@ -81,6 +81,19 @@
             }
 
             return false;
+        }
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
+
+        public string FullString()
+        {
+            return string.Format("{0}{1}Classes:{1}{2}",
+                this.Name,
+                Environment.NewLine,
+                string.Join(Environment.NewLine, this.Classes));
         }
     }
 }

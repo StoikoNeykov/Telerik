@@ -5,9 +5,12 @@
 
     using SchoolClasses.Interfaces;
 
+    /// <summary>
+    /// Represent school classes. Holds list of students and list of teachers for every instance. 
+    /// ClassIdent is something like a name
+    /// </summary>
     public class ClassOfStudents : ICommentable
     {
-        // something like name
         private string classIdent;
 
         private List<Student> students;
@@ -23,27 +26,11 @@
             this.Teachers = new List<Teacher>();
         }
 
-        private ClassOfStudents(ClassOfStudents classForCopy)
-        {
-            this.ClassIdent = classForCopy.ClassIdent;
-            this.Students = new List<Student>(classForCopy.Students);
-            this.Teachers = new List<Teacher>(classForCopy.Teachers);
-            this.Comment = classForCopy.Comment;
-        }
-
         public List<Student> Students
         {
             get
             {
-                var result = new List<Student>();
-                if (students.Count > 0)
-                {
-                    foreach (var student in this.students)
-                    {
-                        result.Add(student.CopyStudent());
-                    }
-                }
-                return result;
+                return new List<Student>(this.students);
             }
             private set
             {
@@ -55,15 +42,7 @@
         {
             get
             {
-                var result = new List<Teacher>();
-                if (Teachers.Count > 0)
-                {
-                    foreach (var teach in this.Teachers)
-                    {
-                        result.Add(teach.CopyTeacher());
-                    }
-                }
-                return result;
+                return new List<Teacher>(this.teachers);
             }
             private set
             {
@@ -87,6 +66,10 @@
         {
             get
             {
+                if (string.IsNullOrEmpty(this.Comment))
+                {
+                    return "There is not comments added for this class still!";
+                }
                 return this.comment;
             }
             set
@@ -173,28 +156,18 @@
             return false;
         }
 
-        internal ClassOfStudents CopyClass()
+        public override string ToString()
         {
-            return new ClassOfStudents(this);
+            return this.ClassIdent;
         }
 
-        public override bool Equals(object classOfStudents)
+        public string FullString()
         {
-            if (!(classOfStudents is ClassOfStudents))
-            {
-                return false;
-            }
-
-            var other = classOfStudents as ClassOfStudents;
-            if (this.ClassIdent == other.classIdent
-                && this.Comment == other.Comment
-                && this.Students == other.Students
-                && this.Teachers == other.Teachers)
-            {
-                return true;
-            }
-
-            return false;
+            return string.Format("{0}:{1}Teachers:{1}{2}{1}Students:{1}{3}",
+                this.ClassIdent,
+                Environment.NewLine,
+                string.Join(Environment.NewLine, this.Teachers),
+                string.Join(Environment.NewLine, this.Students));
         }
     }
 }
