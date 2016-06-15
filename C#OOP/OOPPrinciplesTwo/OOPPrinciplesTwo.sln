@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{1445CDE9-8AA0-4146-8CDC-90831E76C1D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{0703C888-06B7-4BC0-8582-E7EF0F9CA8CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{684AA6DD-D95F-4DE2-BE6F-53B96325681A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RangeException", "RangeException\RangeException.csproj", "{03766A61-4147-4A74-8C9C-D9AEAACBCE54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1445CDE9-8AA0-4146-8CDC-90831E76C1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1445CDE9-8AA0-4146-8CDC-90831E76C1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1445CDE9-8AA0-4146-8CDC-90831E76C1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1445CDE9-8AA0-4146-8CDC-90831E76C1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0703C888-06B7-4BC0-8582-E7EF0F9CA8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0703C888-06B7-4BC0-8582-E7EF0F9CA8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0703C888-06B7-4BC0-8582-E7EF0F9CA8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0703C888-06B7-4BC0-8582-E7EF0F9CA8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{684AA6DD-D95F-4DE2-BE6F-53B96325681A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684AA6DD-D95F-4DE2-BE6F-53B96325681A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684AA6DD-D95F-4DE2-BE6F-53B96325681A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684AA6DD-D95F-4DE2-BE6F-53B96325681A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03766A61-4147-4A74-8C9C-D9AEAACBCE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03766A61-4147-4A74-8C9C-D9AEAACBCE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03766A61-4147-4A74-8C9C-D9AEAACBCE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03766A61-4147-4A74-8C9C-D9AEAACBCE54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
