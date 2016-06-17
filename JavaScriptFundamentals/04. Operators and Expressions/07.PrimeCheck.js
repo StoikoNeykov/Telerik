@@ -1,16 +1,16 @@
-function name(args) {    
-    var num = +args[0];  
+function name(args) {
+    var num = +args[0];
     var isPrime = true;
     if (num > 1) {
-        for(var i = 2; i <= Math.sqrt(num) ; i += 1) {        
-        if ((num % i) === 0) {
-            isPrime = false;
-            break;
+        for (var i = 2; i <= Math.sqrt(num); i += 1) {
+            if ((num % i) === 0) {
+                isPrime = false;
+                break;
+            }
         }
-        }
-    console.log(isPrime);
+        console.log(isPrime);
     }
-    else{
+    else {
         console.log("false");
     }
 }
