@@ -15,9 +15,9 @@
 
         private int age;
 
-        private SexType sex;
+        private Gender sex;
 
-        public Animal(string name, int age, SexType sex)
+        public Animal(string name, int age, Gender sex)
         {
             this.Name = name;
             this.Age = age;
@@ -54,7 +54,7 @@
             }
         }
 
-        public SexType Sex
+        public Gender Sex
         {
             get
             {

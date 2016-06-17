@@ -1,6 +1,6 @@
 ﻿namespace AnimalHierarchy.Enumerations
 {
-    public enum SexType
+    public enum Gender
     {
         Male,
         Female

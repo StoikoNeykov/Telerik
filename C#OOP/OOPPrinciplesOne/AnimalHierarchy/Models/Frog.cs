@@ -11,7 +11,7 @@
     {
         private string color;
 
-        public Frog(string name, int age, SexType sex, string color)
+        public Frog(string name, int age, Gender sex, string color)
             : base(name, age, sex)
         {
             this.Color = color;

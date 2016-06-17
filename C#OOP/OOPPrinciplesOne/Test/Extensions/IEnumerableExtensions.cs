@@ -22,7 +22,7 @@
         }
 
         /// <summary>
-        /// Cals Average 
+        /// Cals Average age
         /// </summary>
         /// <typeparam name="T"> Animal </typeparam>
         /// <param name="action"> Filter animals by type </param>

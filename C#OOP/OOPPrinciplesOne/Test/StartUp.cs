@@ -97,7 +97,7 @@
         private static void TestAnimals()
         {
             Random rng = new Random();
-            var doge = new Dog("Doge", 5, SexType.Male);
+            var doge = new Dog("Doge", 5, Gender.Male);
 
             // chance a dog to find a stick is about 80% :D
             Console.WriteLine(doge.FollowTheStick(rng.Next(10)));
@@ -106,18 +106,18 @@
             Console.WriteLine(doge.FollowTheStick(rng.Next(10)));
             Console.WriteLine(doge.Sound());
 
-            var otherDoge = new Dog("OtherDoge", 0, SexType.Male);
+            var otherDoge = new Dog("OtherDoge", 0, Gender.Male);
             Console.WriteLine(otherDoge.FollowTheStick(rng.Next(10)));
             otherDoge.Sound();
             PrintLine();
 
-            var froggy = new Frog("Froggy", 2, SexType.Female, "green");
+            var froggy = new Frog("Froggy", 2, Gender.Female, "green");
             Console.WriteLine(froggy.Sound());
             Console.WriteLine(froggy.Talk());
             Console.WriteLine(froggy.Sound());
             PrintLine();
 
-            var cat = new Cat("Stamat", 3, SexType.Male);
+            var cat = new Cat("Stamat", 3, Gender.Male);
             Console.WriteLine(cat.Play(rng.Next(10)));
 
             var kitty = new Kitty("Kitty", 1);
@@ -198,44 +198,44 @@
 
         public static void AddCats(List<Animal> animals)
         {
-            animals.Add(new Cat("Joann", 7, SexType.Female));
-            animals.Add(new Cat("Layla", 4, SexType.Female));
-            animals.Add(new Cat("Felton", 1, SexType.Male));
-            animals.Add(new Cat("Claribel", 1, SexType.Female));
-            animals.Add(new Cat("Hilton", 7, SexType.Male));
-            animals.Add(new Cat("Rachell", 3, SexType.Female));
-            animals.Add(new Cat("Valerie", 5, SexType.Female));
-            animals.Add(new Cat("Wilber", 0, SexType.Male));
-            animals.Add(new Cat("Elvira", 8, SexType.Female));
-            animals.Add(new Cat("Shaun", 5, SexType.Male));
+            animals.Add(new Cat("Joann", 7, Gender.Female));
+            animals.Add(new Cat("Layla", 4, Gender.Female));
+            animals.Add(new Cat("Felton", 1, Gender.Male));
+            animals.Add(new Cat("Claribel", 1, Gender.Female));
+            animals.Add(new Cat("Hilton", 7, Gender.Male));
+            animals.Add(new Cat("Rachell", 3, Gender.Female));
+            animals.Add(new Cat("Valerie", 5, Gender.Female));
+            animals.Add(new Cat("Wilber", 0, Gender.Male));
+            animals.Add(new Cat("Elvira", 8, Gender.Female));
+            animals.Add(new Cat("Shaun", 5, Gender.Male));
         }
 
         public static void AddDogs(List<Animal> animals)
         {
-            animals.Add(new Dog("Gregorio", 2, SexType.Male));
-            animals.Add(new Dog("Taneka", 9, SexType.Female));
-            animals.Add(new Dog("Hollis", 3, SexType.Male));
-            animals.Add(new Dog("Estelle", 1, SexType.Female));
-            animals.Add(new Dog("Woodrow", 3, SexType.Male));
-            animals.Add(new Dog("Marta", 4, SexType.Female));
-            animals.Add(new Dog("August", 9, SexType.Male));
-            animals.Add(new Dog("Jessika", 7, SexType.Female));
-            animals.Add(new Dog("Rosann", 4, SexType.Female));
-            animals.Add(new Dog("Nguyet", 9, SexType.Female));
+            animals.Add(new Dog("Gregorio", 2, Gender.Male));
+            animals.Add(new Dog("Taneka", 9, Gender.Female));
+            animals.Add(new Dog("Hollis", 3, Gender.Male));
+            animals.Add(new Dog("Estelle", 1, Gender.Female));
+            animals.Add(new Dog("Woodrow", 3, Gender.Male));
+            animals.Add(new Dog("Marta", 4, Gender.Female));
+            animals.Add(new Dog("August", 9, Gender.Male));
+            animals.Add(new Dog("Jessika", 7, Gender.Female));
+            animals.Add(new Dog("Rosann", 4, Gender.Female));
+            animals.Add(new Dog("Nguyet", 9, Gender.Female));
         }
 
         public static void AddFrogs(List<Animal> animals)
         {
-            animals.Add(new Frog("Trevor", 9, SexType.Male, "Green"));
-            animals.Add(new Frog("Katelyn", 7, SexType.Female, "Gray"));
-            animals.Add(new Frog("Keven", 4, SexType.Male, "Brown"));
-            animals.Add(new Frog("Lennie", 1, SexType.Female, "Gray"));
-            animals.Add(new Frog("Danika", 9, SexType.Female, "Green"));
-            animals.Add(new Frog("Lucretia", 9, SexType.Female, "Green"));
-            animals.Add(new Frog("Clarinda", 6, SexType.Female, "Gray"));
-            animals.Add(new Frog("Aliza", 8, SexType.Female, "Brown"));
-            animals.Add(new Frog("Deon", 1, SexType.Male, "Green"));
-            animals.Add(new Frog("Dewitt", 6, SexType.Male, "Brown"));
+            animals.Add(new Frog("Trevor", 9, Gender.Male, "Green"));
+            animals.Add(new Frog("Katelyn", 7, Gender.Female, "Gray"));
+            animals.Add(new Frog("Keven", 4, Gender.Male, "Brown"));
+            animals.Add(new Frog("Lennie", 1, Gender.Female, "Gray"));
+            animals.Add(new Frog("Danika", 9, Gender.Female, "Green"));
+            animals.Add(new Frog("Lucretia", 9, Gender.Female, "Green"));
+            animals.Add(new Frog("Clarinda", 6, Gender.Female, "Gray"));
+            animals.Add(new Frog("Aliza", 8, Gender.Female, "Brown"));
+            animals.Add(new Frog("Deon", 1, Gender.Male, "Green"));
+            animals.Add(new Frog("Dewitt", 6, Gender.Male, "Brown"));
         }
 
         public static void AddKitties(List<Animal> animals)

@@ -9,7 +9,7 @@
     public class Kitty : Cat, ISound
     {
         public Kitty(string name, int age) 
-            : base(name, age, SexType.Female)
+            : base(name, age, Gender.Female)
         {
         }
 

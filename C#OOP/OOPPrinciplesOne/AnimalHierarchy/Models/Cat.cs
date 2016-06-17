@@ -8,7 +8,7 @@
     /// </summary>
     public class Cat : Animal, ISound
     {
-        public Cat(string name, int age, SexType sex)
+        public Cat(string name, int age, Gender sex)
             : base(name, age, sex)
         {
         }

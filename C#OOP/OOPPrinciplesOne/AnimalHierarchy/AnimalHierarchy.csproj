@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enumerations\SexType.cs" />
+    <Compile Include="Enumerations\Gender.cs" />
     <Compile Include="Interfaces\ISound.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Cat.cs" />
