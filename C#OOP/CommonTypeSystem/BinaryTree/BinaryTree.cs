@@ -22,7 +22,7 @@
             {
                 return this.root;
             }
-            set
+            private set
             {
                 this.root = value;
             }
@@ -86,7 +86,7 @@
 
         public BinaryTree<T> Clone()
         {
-            return new BinaryTree<T>(this.Root.DeepCopy());
+            return new BinaryTree<T>(this.Root);
         }
 
         object ICloneable.Clone()
