@@ -12,16 +12,15 @@
         public static void Test()
         {
             // 1, 1/2, 1/4, 1/8 .... 
-            var result = Calculator.Calc(100000, (y, x) => 1 / x);
+            var result = Calculator.Calc(1000, x => x / 2);
             Console.WriteLine("{0:f2}", result);
 
             // 1, -1/2, 1/4, -1/8 ... 
-            result = Calculator.Calc(100000, (y, x) => x % 2 == 0 ? -1 / x : 1 / x);
+            result = Calculator.Calc(1000, x => -x / 2);
             Console.WriteLine("{0:f2}", result);
 
-            // 1! 2! 3! 4! ... 
-            // Try with 100
-            result = Calculator.Calc(1000, (y, x) => y * x);
+            // 1/1! 1/2! 1/3! 1/4! ... 
+            result = Calculator.Calc2(1000, (x, i) => x * (1 / i));
             Console.WriteLine("{0:f2}", result);
         }
     }

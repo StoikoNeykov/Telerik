@@ -27,7 +27,7 @@
 
             // LINQTest.Test5();
 
-            // CovergentSeriesTest.Test();
+             CovergentSeriesTest.Test();
         }
     }
 }
