@@ -25,7 +25,7 @@
         {
             double last = 1;
             double sum = 0;
-            for (int i = 1; i < loops; i++)
+            for (int i = 1; i < loops + 1; i++)
             {
 
                 last = func(last, i);

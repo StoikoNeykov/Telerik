@@ -20,7 +20,7 @@
             Console.WriteLine("{0:f2}", result);
 
             // 1/1! 1/2! 1/3! 1/4! ... 
-            result = Calculator.Calc2(1000, (x, i) => x * (1 / i));
+            result = Calculator.Calc2(100, (x, i) => x * (1 / i));
             Console.WriteLine("{0:f2}", result);
         }
     }
