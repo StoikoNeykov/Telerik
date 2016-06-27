@@ -6,10 +6,10 @@ function solve(args) {
     if (d < 0) {
         console.log('no real roots');
     } else if (d === 0) {
-        console.log('x1=x2=' + (-b / (2 * a)).toFixed(2));
+        console.log('x1=x2=' + (-1 * b / (2 * a)).toFixed(2));
     } else {
-        var x1 = (-b + Math.sqrt(d)) / (2 * a);
-        var x2 = (-b - Math.sqrt(d)) / (2 * a);
+        var x1 = (-1 * b + Math.sqrt(d)) / (2 * a);
+        var x2 = (-1 * b - Math.sqrt(d)) / (2 * a);
         if ((x2 - x1) > 0) {
             console.log('x1=' + x1.toFixed(2) + '; x2=' + x2.toFixed(2));
         } else {
