@@ -14,7 +14,11 @@ function solve(args) {
 
     result = splited.map(m => {
         var match = m.match(matchExtractLable);
+        if(match) {
         return '[' + match[2] + '](' + match[1] + ')' + match[3];
+        } else {
+            return m;
+        }
     });
 
     part += result.join('');
