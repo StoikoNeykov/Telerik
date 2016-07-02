@@ -1,4 +1,46 @@
 function solve(args) {
+    let str = args[0] + '';
+
+    let upcase = (string) => {
+        return string.replace(/<upcase>(.*?)<\/upcase>/ig, (a, b) => {
+            return b.toUpperCase();
+        });
+    };
+
+    let lowcase = (string) => {
+        return string.replace(/<lowcase>(.*?)<\/lowcase>/ig, (a, b) => {
+            return b.toLowerCase();
+        });
+    };
+
+    let orgcase = (string) => {
+        return string.replace(/<orgcase>(.*?)<\/orgcase>/ig, (a, b) => {
+            return b;
+        });
+    };
+
+    let parsers = [upcase, lowcase, orgcase];
+
+    let parseTags = (string) => {
+        for (const parser of parsers) {
+            string = parser(string);
+        }
+
+        return string;
+    }
+
+    
+    str = parseTags(str);
+    console.log(str);
+}
+
+// start 
+text = ['We are <orgcase>liViNg</orgcase> in a <upcase>yellow submarine</upcase>. We <orgcase>doN\'t</orgcase> have <lowcase>anything</lowcase> else.'];
+
+solve(text);
+
+// old stories! 
+function solveOld1(args) {
     var i, len,
         inUpper,
         inLower,
@@ -9,11 +51,15 @@ function solve(args) {
         if (args[0][i] === '<') {
             command = '<';
             while (args[0][i] !== '>') {
+                if (args[0][i] === '<' && command.length > 1) {
+                    result += command;
+                    command = '<';
+                }
+
                 i += 1;
                 command += args[0][i];
             }
 
-            debugger;
             switch (true) {
                 // Isn`t clear do we have to remove wrong close-type tags or have to print it ... 
                 // also remove irrelevant tags
@@ -75,8 +121,8 @@ function solve(args) {
 
 
 // other try 
-function solve(args) {
-    var i, len,
+function solveOld2(args) {
+    var i, len, text,
         command = '',
         commands = [],
         scope = 0,
@@ -152,11 +198,22 @@ function solve(args) {
     // very unhappy case - need more close-type tags
     if (scope) {
         while (scope) {
-            commands[scope] += scopes[scope];
-            scopes[scope - 1] += commands[scope];
+            command = commands.shift();
+            text = scopes.shift();
+
+
+            switch (command) {
+                case '<upcase>':
+                    text = text.toUpperCase();
+                    break;
+                case '<lowcase>':
+                    text = text.toLowerCase();
+                default:
+                    break;
+            }
+
             scope -= 1;
-            scopes.length -= 1;
-            commands.length -= 1;
+            scopes[scope] += text;
         }
 
         // expected scopes.length = 1; scopes[0] = result; commands.length = 1; commands[0] = ''; 

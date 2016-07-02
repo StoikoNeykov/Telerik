@@ -1,54 +1,26 @@
 function solve(args) {
-    var data = JSON.parse(args[0]),
-        result;
-
-    String.prototype.bind = function (data) {
-        var texts = (this + '').split('><'),
-            splited = texts[0].split(' '),
-            i, len,
-            prop, result = '',
-            content, keyword,
-            arr = [],
-            regex = /data-bind-\w+=/;
-
-        for (i = 0, len = splited.length; i < len; i += 1) {
-            result += splited[i] + ' ';
-
-            if (splited[i].match(regex)) {
-                keyword = String(splited[i].match(regex))
-                keyword = keyword.slice(10, keyword.length - 1);
-                prop = splited[i].split('="');
-                prop = prop[1].slice(0, prop[1].length - 1);
-
-                if (keyword === 'content') {
-                    content = data[prop];
-                } else if (data[prop]) {
-                    arr.push(keyword);
-                    arr.push(data[prop]);
-                }
-            }
+    var obj = JSON.parse(args[0]);
+    var text = '' + args[1];
+    text = text.replace(/'/, '"');
+    var regex = /data-bind-(.*?)="(.*?)"/gmi;
+    var currentMatch;
+    while (currentMatch = regex.exec(text)) {
+        var index = text.indexOf('>');
+        if (text[index - 1] === '/') { // if tag is self closing
+            index--;
         }
-
-        result = result.trim();
-
-        while (arr.length) {
-            result += ' ' + arr.shift();
-            result += '="' + arr.shift() + '"';
+        var field = currentMatch[1];
+        if (field.toLowerCase() === 'content') {
+            var arr = text.split('');
+            var x = arr.splice(index + 1, 0, obj[currentMatch[2]]);
+            text = arr.join('');
         }
-
-        result += '>';
-
-        if (content) {
-            result += content;
+        else {
+            var arr2 = text.split('');
+            var x2 = arr2.splice(index, 0, " " + field + '="' + obj[currentMatch[2]] + '"');
+            text = arr2.join('');
         }
-        
-        if (texts[1]) {
-            result += '<' + texts[1];
-        }
+    }
 
-        return result;
-    };
-
-    result = args[1].bind(data);
-    console.log(result);
+    console.log(text);
 }
