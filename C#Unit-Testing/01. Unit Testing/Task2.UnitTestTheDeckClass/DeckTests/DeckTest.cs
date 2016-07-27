@@ -95,8 +95,8 @@
             Assert.AreEqual(24 - timesCall, deck.CardsLeft);
         }
 
-        // WARNING: test can return fake fail but change to happens depend of parameter
-        // recommend parameter to be bigger then 3 (well if 3 times in a row made exac same decks probably something is wrong)
+        // WARNING: test can return fake fail but chance to happens depend of parameter
+        // recommend parameter to be bigger then 3 (well if 3 times in a row made exact same decks probably something is wrong)
         // Another Warning: extremly high numberOfTimesChecked can slow dramatically the test
         [Test]
         [TestCase(4)]
