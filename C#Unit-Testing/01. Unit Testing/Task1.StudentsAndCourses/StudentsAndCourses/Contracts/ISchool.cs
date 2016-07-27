@@ -6,9 +6,9 @@
     {
         string SchoolName { get; }
 
-        ICollection<IStudent> StudentList { get; }
+        IEnumerable<IStudent> StudentList { get; }
 
-        ICollection<ICourse> CoursesList { get; }
+        IEnumerable<ICourse> CoursesList { get; }
 
         int GenerateStudentId();
 

@@ -5,7 +5,7 @@
 
     public static class Validator
     {
-        public static void ThrowIfNull(object obj, string paramName)
+        public static void NullCheck(object obj, string paramName)
         {
             if (obj == null)
             {
@@ -20,8 +20,8 @@
 
         public static bool IsPartOfCollection<T>(IEnumerable<T> collection, T collectionMember)
         {
-            ThrowIfNull(collection, "Collection");
-            ThrowIfNull(collectionMember, "CollectionMember");
+            NullCheck(collection, "Collection");
+            NullCheck(collectionMember, "CollectionMember");
 
             foreach (var member in collection)
             {

@@ -11,17 +11,19 @@
     /// </summary>
     public class Student : IStudent
     {
-        private readonly int id;
+        private int id;
         private string name;
         private ICollection<ICourse> courses;
 
         // I know it looks weird BUT 1 person is student ONLY if part of some school
         // curent instance of Student working with only 1 school so if he/she leave it there 
         // is no more courseslist, id and he/she is not student anymore and object is useless in this context
-        // that`s why Id is readonly. 
+        // ofc the idea is to use mocking to pass that school - practice is everything
         public Student(string name, ISchool school)
         {
-            this.id = school.GenerateStudentId();
+            Validator.NullCheck(school, "School");
+
+            this.Id = school.GenerateStudentId();
             this.courses = new List<ICourse>();
             this.Name = name;
             school.AddStudent(this);
@@ -50,21 +52,30 @@
             {
                 return this.id;
             }
+            private set
+            {
+                if (value < 10000 || value > 99999)
+                {
+                    throw new ArgumentException("Id should be in range 10000-99999");
+                }
+
+                this.id = value;
+            }
         }
 
         public IEnumerable<ICourse> Courses
         {
             get
             {
-                return new List<ICourse>(this.courses);
+                return this.courses;
             }
         }
 
         public void JoinCourse(ICourse course)
         {
-            Validator.ThrowIfNull(course, "Course");
+            Validator.NullCheck(course, "Course");
 
-            if(Validator.IsPartOfCollection(this.courses, course))
+            if (Validator.IsPartOfCollection(this.courses, course))
             {
                 throw new InvalidOperationException($"{this} is already part of {course}");
             }
@@ -75,7 +86,7 @@
 
         public void LeaveCourse(ICourse course)
         {
-            Validator.ThrowIfNull(course, "Course");
+            Validator.NullCheck(course, "Course");
 
             if (Validator.IsPartOfCollection(this.courses, course))
             {
@@ -84,9 +95,9 @@
             }
             else
             {
-                throw new ArgumentException($"{course} is not added in {this} courses!");
+                throw new InvalidOperationException($"{course} is not added in {this} courses!");
             }
-            
+
         }
 
         public override string ToString()

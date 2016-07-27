@@ -7,7 +7,7 @@
         string CourseName { get; }
 
         // ICollection have Count
-        ICollection<IStudent> StudentsList { get; }
+        IEnumerable<IStudent> StudentsList { get; }
 
         void AddStudent(IStudent student);
         void RemoveStudent(IStudent student);

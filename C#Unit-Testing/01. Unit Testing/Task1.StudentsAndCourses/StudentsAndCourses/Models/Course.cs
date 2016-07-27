@@ -8,8 +8,6 @@
 
     public class Course : ICourse
     {
-        private const int MaxStudentsInCourse = 29;
-
         private ICollection<IStudent> studentsList;
         private string courseName;
 
@@ -19,7 +17,7 @@
             this.CourseName = courseName;
         }
 
-        public ICollection<IStudent> StudentsList
+        public IEnumerable<IStudent> StudentsList
         {
             get
             {
@@ -46,9 +44,9 @@
 
         public void AddStudent(IStudent student)
         {
-            Validator.ThrowIfNull(student, "Student");
+            Validator.NullCheck(student, "Student");
 
-            if (this.studentsList.Count >= MaxStudentsInCourse)
+            if (this.studentsList.Count >=GlobalConstants.MaxStudentsInCourse)
             {
                 throw new InvalidOperationException("Course is already full!");
             }
@@ -63,7 +61,7 @@
 
         public void RemoveStudent(IStudent student)
         {
-            Validator.ThrowIfNull(student, "Student");
+            Validator.NullCheck(student, "Student");
 
             if (Validator.IsPartOfCollection(this.studentsList, student))
             {

@@ -8,9 +8,6 @@
 
     public class School : ISchool
     {
-        private const int MaxStudents = 90000;
-        private const int StudentIdStartsFrom = 10000;
-
         private string schoolName;
         private ICollection<ICourse> coursesList;
         private ICollection<IStudent> studentList;
@@ -39,7 +36,7 @@
             }
         }
 
-        public ICollection<ICourse> CoursesList
+        public IEnumerable<ICourse> CoursesList
         {
             get
             {
@@ -47,17 +44,17 @@
             }
         }
 
-        public ICollection<IStudent> StudentList
+        public IEnumerable<IStudent> StudentList
         {
             get
             {
-                return new List<IStudent>(this.studentList);
+                return this.studentList;
             }
         }
 
         public void AddCourse(ICourse course)
         {
-            Validator.ThrowIfNull(course, "Course");
+            Validator.NullCheck(course, "Course");
 
             if (Validator.IsPartOfCollection(this.coursesList, course))
             {
@@ -71,7 +68,7 @@
 
         public void RemoveCourse(ICourse course)
         {
-            Validator.ThrowIfNull(course, "Course");
+            Validator.NullCheck(course, "Course");
 
             if (Validator.IsPartOfCollection(this.coursesList, course))
             {
@@ -85,7 +82,7 @@
 
         public void AddStudent(IStudent student)
         {
-            Validator.ThrowIfNull(student, "Student");
+            Validator.NullCheck(student, "Student");
 
             if (Validator.IsPartOfCollection(this.studentList, student))
             {
@@ -99,7 +96,7 @@
 
         public void RemoveStudent(IStudent student)
         {
-            Validator.ThrowIfNull(student, "Student");
+            Validator.NullCheck(student, "Student");
 
             if (Validator.IsPartOfCollection(this.studentList, student))
             {
@@ -113,12 +110,12 @@
 
         public int GenerateStudentId()
         {
-            if (this.studentList.Count >= MaxStudents)
+            if (this.studentList.Count >= GlobalConstants.MaxStudents)
             {
                 throw new InvalidOperationException($"{this} is overpopulated!");
             }
 
-            var id = StudentIdStartsFrom + this.studentList.Count;
+            var id = GlobalConstants.StudentIdStartsFrom + this.studentList.Count;
 
             return id;
         }
