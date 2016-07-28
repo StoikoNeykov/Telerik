@@ -160,10 +160,10 @@
         [Test]
         [TestCase(2, 3, 4, 2, 2)]
         [TestCase(2, 2, 4, 7, 2)]
-        [TestCase(2, 3, 4, 2, 2)]
+        [TestCase(2, 3, 4, 10, 2)]
         [TestCase(6, 3, 4, 9, 2)]
         [TestCase(2, 10, 4, 2, 12)]
-        public void IsFourOfKind_ShouldReturnFalse_IfItsNotContain4SameFaces(int face1, int face2, int face3, int face4, int face5)
+        public void IsFourOfKind_ShouldReturnFalse_IfHandDoNotContain4SameFaces(int face1, int face2, int face3, int face4, int face5)
         {
             var faces = new List<int> { face1, face2, face3, face4, face5 };
             var collection = new List<ICard>();
@@ -179,6 +179,8 @@
             Mock.Arrange(() => hand.Cards).Returns(collection);
 
             var checker = new PokerHandsChecker();
+
+            Assert.IsFalse(checker.IsFourOfAKind(hand));
         }
 
         [Test]
