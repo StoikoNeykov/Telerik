@@ -105,6 +105,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarsControllerTests.cs" />
     <Compile Include="CarsRepoChild.cs" />
     <Compile Include="CarsRepositoryTest.cs" />
     <Compile Include="CarChild.cs" />

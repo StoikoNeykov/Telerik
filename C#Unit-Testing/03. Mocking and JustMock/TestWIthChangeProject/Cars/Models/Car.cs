@@ -1,6 +1,8 @@
 ﻿namespace Cars.Models
 {
-    public class Car
+    using Contracts;
+
+    public class Car : ICar
     {
         public int Id { get; set; }
 

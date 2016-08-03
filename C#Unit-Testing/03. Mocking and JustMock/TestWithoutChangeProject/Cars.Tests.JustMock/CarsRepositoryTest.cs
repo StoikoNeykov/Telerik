@@ -107,7 +107,7 @@
         }
 
         [Test]
-        public void CarsRepositoryGetById_ShouldThrowAnException_IfIdIsNotFound()
+        public void CarsRepositoryGetById_SchhouldThrowAnException_IfIdIsNotFound()
         {
             var mockDb = new Mock<IDatabase>();
             mockDb.Setup(x => x.Cars).Returns(new List<Car>());
@@ -122,11 +122,11 @@
         [TestCase(8)]
         public void CarsRepositoryGetById_ShouldReturnCarProperly(int needed)
         {
-            int magicNumberThatInvludeValuesAbove = 10;
+            int magicNumberThatIncludeValuesAbove = 10;
 
             var collection = new List<Car>();
 
-            for (int i = 0; i < magicNumberThatInvludeValuesAbove; i++)
+            for (int i = 0; i < magicNumberThatIncludeValuesAbove; i++)
             {
                 collection.Add(new CarChild(id: i));
             }
@@ -208,9 +208,11 @@
             }
 
             var mockDb = new Mock<IDatabase>();
+            var repo = new CarsRepository(mockDb.Object);
+
             mockDb.Setup(x => x.Cars).Returns(collection);
 
-            var repo = new CarsRepository(mockDb.Object);
+
 
             var expected = collection
                             .OrderByDescending(x => x.Year)
