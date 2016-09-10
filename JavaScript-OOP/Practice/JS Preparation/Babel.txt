@@ -1,0 +1,7 @@
+npm init
+
+npm install babel-cli --save-dev
+
+npm install babel-preset-es2015 --save-dev
+
+babel scripts2 --presets es2015 -d scripts
