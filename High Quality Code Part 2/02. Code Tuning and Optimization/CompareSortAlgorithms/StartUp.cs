@@ -74,10 +74,10 @@ namespace CompareSortAlgorithms
             Console.WriteLine($" InsertionSort: {Exec((arr) => InsertionSort(arr), copy, NumberOfCalls) }");
 
             Array.Copy(array, copy, array.Length);
-            Console.WriteLine($" SelectionSort: {Exec((arr) => SelectionSort(arr), array, NumberOfCalls)}");
+            Console.WriteLine($" SelectionSort: {Exec((arr) => SelectionSort(arr), copy, NumberOfCalls)}");
 
             Array.Copy(array, copy, array.Length);
-            Console.WriteLine($" QuickSOrt: {Exec((arr, start, end) => Quicksort(arr, start, end), array, 0, array.Length - 1, NumberOfCalls)}");
+            Console.WriteLine($" QuickSOrt: {Exec((arr, start, end) => Quicksort(arr, start, end), copy, 0, copy.Length - 1, NumberOfCalls)}");
 
             Console.WriteLine();
         }
