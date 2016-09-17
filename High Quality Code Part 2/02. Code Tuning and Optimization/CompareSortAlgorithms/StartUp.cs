@@ -22,7 +22,7 @@ namespace CompareSortAlgorithms
 
             SerialCaller(100);
 
-            // SerialCaller(10000);
+            SerialCaller(10000);
         }
 
         // Grouping methods
@@ -216,28 +216,28 @@ namespace CompareSortAlgorithms
         }
 
         // Measure
-        private static TimeSpan Exec<T>(Action<T> act, T arg, int times)
+        private static TimeSpan Exec<T>(Action<T> act, T arr, int times)
         {
             var watch = new Stopwatch();
             watch.Start();
 
             for (int i = 0; i < times; i++)
             {
-                act(arg);
+                act(arr);
             }
 
             watch.Stop();
             return watch.Elapsed;
         }
 
-        private static TimeSpan Exec<T>(Action<T, int, int> act, T arg, int start, int end, int times)
+        private static TimeSpan Exec<T>(Action<T, int, int> act, T arr, int start, int end, int times)
         {
             var watch = new Stopwatch();
             watch.Start();
 
             for (int i = 0; i < times; i++)
             {
-                act(arg, start, end);
+                act(arr, start, end);
             }
 
             watch.Stop();
