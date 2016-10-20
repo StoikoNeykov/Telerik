@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="style.xslt" ?>
+<students>
+  <student xmlns:students="urn:students-academy-com:ninja">
+    <name>Pesho Ostroto</name>
+    <sex>Male</sex>
+    <birthDate>1983-01-01</birthDate>
+    <phone>+359888123456</phone>
+    <email>pesho@gmail.com</email>
+    <course>C#</course>
+    <specialty>Ninja</specialty>
+    <facultyNumber>123456789</facultyNumber>
+    <exams>
+      <exam>
+        <name>C# OOP</name>
+        <tutor>Marto Veshev</tutor>
+        <score>90</score>
+      </exam>
+      <exam>
+        <name>Unit Testing</name>
+        <tutor>Ivan Kolev</tutor>
+        <score>80</score>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Maria DB</name>
+    <sex>Female</sex>
+    <birthDate>1982-12-31</birthDate>
+    <phone>+359888234567</phone>
+    <email>Maria@gmail.com</email>
+    <course>Web</course>
+    <specialty>Ninja</specialty>
+    <facultyNumber>987654321</facultyNumber>
+    <exams>
+      <exam>
+        <name>JS OOP</name>
+        <tutor>Doncho Minkov</tutor>
+        <score>75</score>
+      </exam>
+      <exam>
+        <name>JS APPS</name>
+        <tutor>Evlogi Hristov</tutor>
+        <score>68</score>
+      </exam>
+    </exams>
+  </student>
+</students>
