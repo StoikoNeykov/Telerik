@@ -142,4 +142,4 @@
         FROM Employees e   
  	    INNER JOIN Departments d   
 		    ON d.DepartmentID = e.DepartmentID   
-	WHERE YEAR(e.HireDate) > 1995 AND YEAR(e.HireDate) < 2005   
+	        WHERE YEAR(e.HireDate) > 1995 AND YEAR(e.HireDate) < 2005   
