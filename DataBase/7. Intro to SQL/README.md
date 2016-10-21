@@ -131,6 +131,7 @@
 		            ON e.ManagerID = m.EmployeeID   
         ```
 24. _Write a SQL query to find the names of all employees from the departments "Sales" and "Finance" whose hire year is between 1995 and 2005._ <br /> 
+        CODE: 
         ```sql
         SELECT e.FirstName + ' ' + e.LastName AS Employee,   
 		    d.Name AS Department,   
