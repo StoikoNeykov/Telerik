@@ -43,7 +43,7 @@ public final class Singleton {
 }
 ~~~
 
-###### Singleton с Lazy initialization
+###### Singleton thread safe
 ~~~c#
 using System;
 
