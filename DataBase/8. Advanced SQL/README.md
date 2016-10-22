@@ -4,10 +4,10 @@
 1.	_Write a SQL query to find the names and salaries of the employees that take the minimal salary in the company._     
 	*	_Use a nested `SELECT` statement._   
 
-		SELECT FirstName + ' ' + LastName AS Employee, Salary
-			FROM Employees
-			WHERE Salary =
-				(SELECT MIN(Salary) FROM Employees)
+			SELECT FirstName + ' ' + LastName AS Employee, Salary
+				FROM Employees
+				WHERE Salary =
+					(SELECT MIN(Salary) FROM Employees)
 
 2.	_Write a SQL query to find the names and salaries of the employees that have a salary that is up to 10% higher than the minimal salary for the company._   
 
