@@ -20,14 +20,14 @@
 3.	_Write a SQL query to find the full name, salary and department of the employees that take the minimal salary in their department._   
 	*	_Use a nested `SELECT` statement._  
 
-		SELECT e.FirstName, e.LastName, d.Name AS Department, e.Salary
-			FROM Employees e
-			RIGHT OUTER JOIN Departments d
-				ON d.DepartmentID = e.DepartmentID
-					WHERE Salary = 
-						(SELECT MIN(Salary) FROM Employees 
-							WHERE DepartmentID = e.DepartmentID)
-			ORDER BY e.DepartmentID
+			SELECT e.FirstName, e.LastName, d.Name AS Department, e.Salary
+				FROM Employees e
+				RIGHT OUTER JOIN Departments d
+					ON d.DepartmentID = e.DepartmentID
+						WHERE Salary = 
+							(SELECT MIN(Salary) FROM Employees 
+								WHERE DepartmentID = e.DepartmentID)
+				ORDER BY e.DepartmentID
 
 4.	_Write a SQL query to find the average salary in the department #1._ 
 
@@ -258,37 +258,7 @@
 	*	_Define a table `WorkHoursLogs` to track all changes in the `WorkHours` table with triggers._   
 		*	_For each change keep the old record data, the new record data and the command (insert / update / delete)._   
 
-			CREATE TABLE WorkHours
-			(
-				[Id] INT IDENTITY PRIMARY KEY,
-				[EmployeeId] INT NOT NULL,
-				[Date] DATETIME,
-				[Task] NVARCHAR(50),
-				[Hours] INT,
-				[Comments] VARCHAR(250),
-				CONSTRAINT FK_WorkHours_Employees 
-					FOREIGN KEY (EmployeeId) 
-					REFERENCES Employees(EmployeeID)
-			)	
-			GO
-
-			INSERT INTO WorkHours
-				VALUES 
-					(1, GETDATE(), 'Task1', 10, NULL),
-					(2, GETDATE(), 'Task2', 9, NULL),
-					(3, GETDATE(), 'Task3', 8, 'TODO')
-				GO
-
-			UPDATE WorkHours
-				SET [Comments] = 'Doing nothing'
-				WHERE [EmployeeId] = 1
-				GO
-
-			DELETE FROM WorkHours
-				WHERE [Hours] = 9
-				GO
-
-			CREATE TABLE ReportsLogs
+				CREATE TABLE WorkHours
 				(
 					[Id] INT IDENTITY PRIMARY KEY,
 					[EmployeeId] INT NOT NULL,
@@ -296,45 +266,75 @@
 					[Task] NVARCHAR(50),
 					[Hours] INT,
 					[Comments] VARCHAR(250),
-					[For] VARCHAR(50)
-				)
+					CONSTRAINT FK_WorkHours_Employees 
+						FOREIGN KEY (EmployeeId) 
+						REFERENCES Employees(EmployeeID)
+				)	
 				GO
 
-			CREATE TRIGGER trg_WorkHours_Insert ON WorkHours
-				FOR INSERT 
-				AS
-				INSERT INTO ReportsLogs([EmployeeId], [Date], [Task], [Hours], [Comments], [For])
-					SELECT [EmployeeId], [Date], [Task], [Hours], [Comments], 'INSERT'
-					FROM INSERTED
-				GO
+				INSERT INTO WorkHours
+					VALUES 
+						(1, GETDATE(), 'Task1', 10, NULL),
+						(2, GETDATE(), 'Task2', 9, NULL),
+						(3, GETDATE(), 'Task3', 8, 'TODO')
+					GO
 
-			CREATE TRIGGER trg_WorkHours_Delete ON WorkHours
-				FOR DELETE 
-				AS
-				INSERT INTO ReportsLogs([EmployeeId], [Date], [Task], [Hours], [Comments], [For])
-					SELECT [EmployeeId], [Date], [Task], [Hours], [Comments], 'DELETE'
-					FROM DELETED
-				GO
+				UPDATE WorkHours
+					SET [Comments] = 'Doing nothing'
+					WHERE [EmployeeId] = 1
+					GO
 
-			CREATE TRIGGER trg_WorkHours_Update ON WorkHours
-				FOR UPDATE 
-				AS
-				INSERT INTO ReportsLogs([EmployeeId], [Date], [Task], [Hours], [Comments], [For])
-					SELECT [EmployeeId], [Date], [Task], [Hours], [Comments], 'UPDATE'
-					FROM INSERTED
-				GO
+				DELETE FROM WorkHours
+					WHERE [Hours] = 9
+					GO
 
-			INSERT INTO WorkHours
-				VALUES(2, GETDATE(), 'Task2', 9, NULL)
-				GO
+				CREATE TABLE ReportsLogs
+					(
+						[Id] INT IDENTITY PRIMARY KEY,
+						[EmployeeId] INT NOT NULL,
+						[Date] DATETIME,
+						[Task] NVARCHAR(50),
+						[Hours] INT,
+						[Comments] VARCHAR(250),
+						[For] VARCHAR(50)
+					)
+					GO
 
-			DELETE FROM  WorkHours 
-				WHERE [Hours] = 9
-				GO
+				CREATE TRIGGER trg_WorkHours_Insert ON WorkHours
+					FOR INSERT 
+					AS
+					INSERT INTO ReportsLogs([EmployeeId], [Date], [Task], [Hours], [Comments], [For])
+						SELECT [EmployeeId], [Date], [Task], [Hours], [Comments], 'INSERT'
+						FROM INSERTED
+					GO
 
-			UPDATE WorkHours
-				SET Comments = 'Done'
-				WHERE Comments = 'TODO'
+				CREATE TRIGGER trg_WorkHours_Delete ON WorkHours
+					FOR DELETE 
+					AS
+					INSERT INTO ReportsLogs([EmployeeId], [Date], [Task], [Hours], [Comments], [For])
+						SELECT [EmployeeId], [Date], [Task], [Hours], [Comments], 'DELETE'
+						FROM DELETED
+					GO
+
+				CREATE TRIGGER trg_WorkHours_Update ON WorkHours
+					FOR UPDATE 
+					AS
+					INSERT INTO ReportsLogs([EmployeeId], [Date], [Task], [Hours], [Comments], [For])
+						SELECT [EmployeeId], [Date], [Task], [Hours], [Comments], 'UPDATE'
+						FROM INSERTED
+					GO
+
+				INSERT INTO WorkHours
+					VALUES(2, GETDATE(), 'Task2', 9, NULL)
+					GO
+
+				DELETE FROM  WorkHours 
+					WHERE [Hours] = 9
+					GO
+
+				UPDATE WorkHours
+					SET Comments = 'Done'
+					WHERE Comments = 'TODO'
 
 30.	_Start a database transaction, delete all employees from the '`Sales`' department along with all dependent records from the pother tables._   
 	*	_At the end rollback the transaction._   
