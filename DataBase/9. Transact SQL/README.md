@@ -86,29 +86,29 @@
 
 5.	_Add two more stored procedures `WithdrawMoney(AccountId, money)` and `DepositMoney(AccountId, money)` that operate in transactions._
 
-	CREATE PROC usp_WithdrawMoney
-		@accountId int,
-		@amount money = 0
-		AS
-			BEGIN TRAN
-				UPDATE a
-				SET a.Balance = a.Balance - @amount
-				FROM Accounts AS a
-				WHERE a.Id = @accountId
-			COMMIT TRAN
-		GO
+		CREATE PROC usp_WithdrawMoney
+			@accountId int,
+			@amount money = 0
+			AS
+				BEGIN TRAN
+					UPDATE a
+					SET a.Balance = a.Balance - @amount
+					FROM Accounts AS a
+					WHERE a.Id = @accountId
+				COMMIT TRAN
+			GO
 
-	CREATE PROC usp_DepositMoney
-		@accountId int,
-		@amount money = 0
-		AS
-			BEGIN TRAN
-				UPDATE a
-				SET a.Balance = a.Balance + @amount
-				FROM Accounts AS a
-				WHERE a.Id = @accountId
-			COMMIT TRAN
-		GO
+		CREATE PROC usp_DepositMoney
+			@accountId int,
+			@amount money = 0
+			AS
+				BEGIN TRAN
+					UPDATE a
+					SET a.Balance = a.Balance + @amount
+					FROM Accounts AS a
+					WHERE a.Id = @accountId
+				COMMIT TRAN
+			GO
 
 6.	_Create another table – `Logs(LogID, AccountID, OldSum, NewSum)`._
 	*	_Add a trigger to the `Accounts` table that enters a new entry into the `Logs` table every time the sum on an account changes._
@@ -315,7 +315,7 @@ FROM Employees
 
 			CREATE Assembly concat_assembly 
 				AUTHORIZATION dbo 
-				FROM 'D:\Programming\Telerik-Academy\Databases Homeworks\Transact SQL\SqlStringConcatenation.dll' --- CHANGE THE LOCATION (SAME AS THIS .sql FILE)
+				FROM 'F:\Transact SQL\SqlStringConcatenation.dll' --- CHANGE THE LOCATION (SAME AS THIS .sql FILE)
 				WITH PERMISSION_SET = SAFE; 
 				GO 
 

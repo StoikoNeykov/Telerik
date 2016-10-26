@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. GetCountOfCategoryRows", "1. GetCountOfCategoryRows\1. GetCountOfCategoryRows.csproj", "{EDB33E35-E95C-49DA-89F0-F5D1AB3BC79B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. GetCatrgoriesInfo", "2. GetCatrgoriesInfo\2. GetCatrgoriesInfo.csproj", "{906E2D19-5E7D-4740-985E-3A3DB1ED855C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. GetProductsInCategories", "3. GetProductsInCategories\3. GetProductsInCategories.csproj", "{9F4708D5-3DF5-42CE-8B9F-36503D23319A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. AddNewProduct", "4. AddNewProduct\4. AddNewProduct.csproj", "{DAE2EA77-61DC-4EF7-B48B-29C8AF306D56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. GetImageFromDb", "5. GetImageFromDb\5. GetImageFromDb.csproj", "{7F9ABBA6-753B-4AFB-8AE7-EC36A7DBC8B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. ReadFromExcelFile", "6. ReadFromExcelFile\6. ReadFromExcelFile.csproj", "{5B131FE9-E130-4F20-B20D-CD13E177DF48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0. HelperForOleDbVersion", "0. HelperForOleDbVersion\0. HelperForOleDbVersion.csproj", "{8D0B6E8C-B22E-483D-AB99-67589645406E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. AppendingRowsInExcelTable", "7. AppendingRowsInExcelTable\7. AppendingRowsInExcelTable.csproj", "{D43CEC70-0DC8-484E-B65B-B7F47C14FC08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. FindProductsByName", "8. FindProductsByName\8. FindProductsByName.csproj", "{A262B813-1E29-49AC-8AF8-C491A3BDD319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. MySqlLibrary", "9. MySqlLibrary\9. MySqlLibrary.csproj", "{712CD1F6-0C41-4BF8-9ECD-C8A38B53E8B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. SQLiteLibrary", "10. SQLiteLibrary\10. SQLiteLibrary.csproj", "{48D7570C-9454-45AA-9469-56C529C6B6E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDB33E35-E95C-49DA-89F0-F5D1AB3BC79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB33E35-E95C-49DA-89F0-F5D1AB3BC79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB33E35-E95C-49DA-89F0-F5D1AB3BC79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB33E35-E95C-49DA-89F0-F5D1AB3BC79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906E2D19-5E7D-4740-985E-3A3DB1ED855C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906E2D19-5E7D-4740-985E-3A3DB1ED855C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906E2D19-5E7D-4740-985E-3A3DB1ED855C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906E2D19-5E7D-4740-985E-3A3DB1ED855C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F4708D5-3DF5-42CE-8B9F-36503D23319A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4708D5-3DF5-42CE-8B9F-36503D23319A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4708D5-3DF5-42CE-8B9F-36503D23319A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4708D5-3DF5-42CE-8B9F-36503D23319A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE2EA77-61DC-4EF7-B48B-29C8AF306D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE2EA77-61DC-4EF7-B48B-29C8AF306D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE2EA77-61DC-4EF7-B48B-29C8AF306D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE2EA77-61DC-4EF7-B48B-29C8AF306D56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F9ABBA6-753B-4AFB-8AE7-EC36A7DBC8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F9ABBA6-753B-4AFB-8AE7-EC36A7DBC8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F9ABBA6-753B-4AFB-8AE7-EC36A7DBC8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F9ABBA6-753B-4AFB-8AE7-EC36A7DBC8B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B131FE9-E130-4F20-B20D-CD13E177DF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B131FE9-E130-4F20-B20D-CD13E177DF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B131FE9-E130-4F20-B20D-CD13E177DF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B131FE9-E130-4F20-B20D-CD13E177DF48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D0B6E8C-B22E-483D-AB99-67589645406E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0B6E8C-B22E-483D-AB99-67589645406E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0B6E8C-B22E-483D-AB99-67589645406E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0B6E8C-B22E-483D-AB99-67589645406E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D43CEC70-0DC8-484E-B65B-B7F47C14FC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D43CEC70-0DC8-484E-B65B-B7F47C14FC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D43CEC70-0DC8-484E-B65B-B7F47C14FC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D43CEC70-0DC8-484E-B65B-B7F47C14FC08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A262B813-1E29-49AC-8AF8-C491A3BDD319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A262B813-1E29-49AC-8AF8-C491A3BDD319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A262B813-1E29-49AC-8AF8-C491A3BDD319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A262B813-1E29-49AC-8AF8-C491A3BDD319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712CD1F6-0C41-4BF8-9ECD-C8A38B53E8B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712CD1F6-0C41-4BF8-9ECD-C8A38B53E8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712CD1F6-0C41-4BF8-9ECD-C8A38B53E8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712CD1F6-0C41-4BF8-9ECD-C8A38B53E8B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D7570C-9454-45AA-9469-56C529C6B6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D7570C-9454-45AA-9469-56C529C6B6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D7570C-9454-45AA-9469-56C529C6B6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D7570C-9454-45AA-9469-56C529C6B6E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
