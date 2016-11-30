@@ -93,6 +93,17 @@ namespace Task14
             {
                 for (int j = 0; j < cols; j++)
                 {
+                    if (matrix[i, j] == "0")
+                    {
+                        matrix[i, j] = "u";
+                    }
+                }
+            }
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
                     Console.Write(matrix[i, j] + " ");
                 }
 
